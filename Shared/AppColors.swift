@@ -6,7 +6,13 @@
 //  Copyright © 2019 Recurring Dream LLC. All rights reserved.
 //
 
+#if os(watchOS)
 import WatchKit
+#endif
+
+#if os(iOS)
+import UIKit
+#endif
 
 extension UIColor
 {
