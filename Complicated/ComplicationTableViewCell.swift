@@ -12,6 +12,7 @@ class ComplicationTableViewCell: UITableViewCell {
 
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var thumbnailView: UIImageView!
+    @IBOutlet weak var abbreviationLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

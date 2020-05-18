@@ -23,11 +23,13 @@ import UIKit
 struct Complication
 {
     var name:String = ""
+    var abbreviation:String = ""
     var image:UIImage?
     
     
-    init(name: String, imageName: String) {
+    init(name: String, abbreviation: String, imageName: String) {
         self.name = name
+        self.abbreviation = abbreviation
         self.image = UIImage(named: imageName)
     }
 
