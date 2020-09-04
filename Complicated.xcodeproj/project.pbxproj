@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7292104224730AA0008CFCB1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7292104124730AA0008CFCB1 /* DetailViewController.swift */; };
 		72B46A9724685F2300DBD1C8 /* Complications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B46A9624685F2300DBD1C8 /* Complications.swift */; };
 		72B46A9924685F3400DBD1C8 /* Complication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B46A9824685F3400DBD1C8 /* Complication.swift */; };
 		72B46A9A24685F3D00DBD1C8 /* Complications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B46A9624685F2300DBD1C8 /* Complications.swift */; };
@@ -74,6 +75,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7292104124730AA0008CFCB1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		72B46A9624685F2300DBD1C8 /* Complications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Complications.swift; sourceTree = "<group>"; };
 		72B46A9824685F3400DBD1C8 /* Complication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Complication.swift; sourceTree = "<group>"; };
 		72B46A9C246991BF00DBD1C8 /* ComplicationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationsTableViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				72E0EC9D229B6E66006BD18F /* Main.storyboard */,
 				72B46A9C246991BF00DBD1C8 /* ComplicationsTableViewController.swift */,
 				72B46A9E2469938300DBD1C8 /* ComplicationTableViewCell.swift */,
+				7292104124730AA0008CFCB1 /* DetailViewController.swift */,
 				72E0ECA0229B6E67006BD18F /* Assets.xcassets */,
 				72E0ECA2229B6E67006BD18F /* LaunchScreen.storyboard */,
 				72E0ECA5229B6E67006BD18F /* Info.plist */,
@@ -324,6 +327,7 @@
 				72B46A9D246991BF00DBD1C8 /* ComplicationsTableViewController.swift in Sources */,
 				72B46A9924685F3400DBD1C8 /* Complication.swift in Sources */,
 				72B46A9724685F2300DBD1C8 /* Complications.swift in Sources */,
+				7292104224730AA0008CFCB1 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
