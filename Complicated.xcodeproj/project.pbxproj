@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		726708DD2502DEF80050C8E2 /* ComplicationImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 726708DC2502DEF80050C8E2 /* ComplicationImages.xcassets */; };
+		726708DE2502DEF80050C8E2 /* ComplicationImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 726708DC2502DEF80050C8E2 /* ComplicationImages.xcassets */; };
+		726708DF2502DEF80050C8E2 /* ComplicationImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 726708DC2502DEF80050C8E2 /* ComplicationImages.xcassets */; };
 		7292104224730AA0008CFCB1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7292104124730AA0008CFCB1 /* DetailViewController.swift */; };
 		72B46A9724685F2300DBD1C8 /* Complications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B46A9624685F2300DBD1C8 /* Complications.swift */; };
 		72B46A9924685F3400DBD1C8 /* Complication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B46A9824685F3400DBD1C8 /* Complication.swift */; };
@@ -75,6 +78,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		726708DC2502DEF80050C8E2 /* ComplicationImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ComplicationImages.xcassets; sourceTree = "<group>"; };
 		7292104124730AA0008CFCB1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		72B46A9624685F2300DBD1C8 /* Complications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Complications.swift; sourceTree = "<group>"; };
 		72B46A9824685F3400DBD1C8 /* Complication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Complication.swift; sourceTree = "<group>"; };
@@ -183,6 +187,7 @@
 				72F6AD1A22A1EA690079C75B /* AppColors.swift */,
 				72B46A9624685F2300DBD1C8 /* Complications.swift */,
 				72B46A9824685F3400DBD1C8 /* Complication.swift */,
+				726708DC2502DEF80050C8E2 /* ComplicationImages.xcassets */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -292,6 +297,7 @@
 				72E0ECA4229B6E67006BD18F /* LaunchScreen.storyboard in Resources */,
 				72E0ECA1229B6E67006BD18F /* Assets.xcassets in Resources */,
 				72E0EC9F229B6E66006BD18F /* Main.storyboard in Resources */,
+				726708DD2502DEF80050C8E2 /* ComplicationImages.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +308,7 @@
 				72E0ECB1229B6E68006BD18F /* Assets.xcassets in Resources */,
 				72F6AD1D22A343270079C75B /* Assets.xcassets in Resources */,
 				72E0ECAF229B6E67006BD18F /* Interface.storyboard in Resources */,
+				726708DE2502DEF80050C8E2 /* ComplicationImages.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72E0ECC3229B6E68006BD18F /* Assets.xcassets in Resources */,
+				726708DF2502DEF80050C8E2 /* ComplicationImages.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
