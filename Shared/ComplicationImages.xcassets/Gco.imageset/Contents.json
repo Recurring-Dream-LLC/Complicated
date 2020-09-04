@@ -1,15 +1,16 @@
 {
   "images" : [
     {
-      "filename" : "complicationGraphicCornerCircular32@2X.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "complicationGraphicCornerCircular128@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "complicationGraphicCornerCircular128@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
