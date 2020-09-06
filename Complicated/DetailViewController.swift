@@ -12,13 +12,23 @@ class DetailViewController: UIViewController {
 
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
+    
+    var complication: Complication?
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        if (complication != nil)
+        {
+            image.image = complication?.image
+            nameLabel.text = complication?.name
+            self.navigationItem.title = complication?.name
+
+        }
     }
     
-
     /*
     // MARK: - Navigation
 
