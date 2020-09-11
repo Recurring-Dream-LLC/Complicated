@@ -148,11 +148,11 @@
 			children = (
 				72E0EC99229B6E66006BD18F /* AppDelegate.swift */,
 				72E0EC9B229B6E66006BD18F /* ViewController.swift */,
-				72E0EC9D229B6E66006BD18F /* Main.storyboard */,
 				72B46A9C246991BF00DBD1C8 /* ComplicationsTableViewController.swift */,
 				72B46A9E2469938300DBD1C8 /* ComplicationTableViewCell.swift */,
 				7292104124730AA0008CFCB1 /* DetailViewController.swift */,
 				72E0ECA0229B6E67006BD18F /* Assets.xcassets */,
+				72E0EC9D229B6E66006BD18F /* Main.storyboard */,
 				72E0ECA2229B6E67006BD18F /* LaunchScreen.storyboard */,
 				72E0ECA5229B6E67006BD18F /* Info.plist */,
 			);

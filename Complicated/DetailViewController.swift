@@ -23,8 +23,8 @@ class DetailViewController: UIViewController {
         if (complication != nil)
         {
             image.image = complication?.image
-            nameLabel.text = complication?.name
-            self.navigationItem.title = complication?.name
+            nameLabel.text = complication?.familyName
+            self.navigationItem.title = complication?.familyName
 
         }
     }

@@ -22,13 +22,19 @@ import UIKit
 //╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍
 struct Complication
 {
-    var name:String = ""
+    var familyName:String = ""
+    var complicationFamily:String = ""
+    var imageProvider:String = ""
     var abbreviation:String = ""
     var image:UIImage?
     
     
-    init(name: String, abbreviation: String, imageName: String) {
-        self.name = name
+    init(familyName: String,
+         complicationFamily: String,
+         abbreviation: String,
+         imageName: String) {
+        self.familyName = familyName
+        self.complicationFamily = complicationFamily
         self.abbreviation = abbreviation
         self.image = UIImage(named: imageName)
     }

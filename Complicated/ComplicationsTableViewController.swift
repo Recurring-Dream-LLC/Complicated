@@ -36,7 +36,7 @@ class ComplicationsTableViewController: UITableViewController {
         if let complicationCell = cell as? ComplicationTableViewCell
         {
             let theComplication = Complications.sharedInstance.complications[indexPath.row]
-            complicationCell.nameLabel.text = theComplication.name
+            complicationCell.nameLabel.text = theComplication.familyName
             complicationCell.abbreviationLabel.text = theComplication.abbreviation
             complicationCell.thumbnailView.image = theComplication.image
         }

@@ -27,19 +27,34 @@ class Complications
     var complications = [Complication]()
     
     init() {
-        let C = Complication(name:"Circular Small", abbreviation:"Cs",imageName:"Cs")
+        let C = Complication(familyName:"Circular Small",
+                             complicationFamily:".circularSmall",
+                             abbreviation:"Cs",
+                             imageName:"Cs")
         complications.append(C)
         
-        let Gcc = Complication(name:"Graphic Corner", abbreviation:"Gco",imageName:"Gco")
+        let Gcc = Complication(familyName:"Graphic Corner",
+                               complicationFamily:"..graphicCorner",
+                               abbreviation:"Gco",
+                               imageName:"Gco")
         complications.append(Gcc)
         
-        let GCi = Complication(name:"Graphic Circular", abbreviation:"Gci",imageName:"Gci")
+        let GCi = Complication(familyName:"Graphic Circular",
+                               complicationFamily:"..graphicCircular",
+                               abbreviation:"Gci",
+                               imageName:"Gci")
         complications.append(GCi)
         
-        let Ms = Complication(name:"Modular Small", abbreviation:"Ms",imageName:"Ms")
+        let Ms = Complication(familyName:"Modular Small",
+                              complicationFamily:".modularSmall",
+                              abbreviation:"Ms",
+                              imageName:"Ms")
         complications.append(Ms)
 
-        let Uss = Complication(name:"Utilitarian Small", abbreviation:"Us",imageName:"Us")
+        let Uss = Complication(familyName:"Utilitarian Small",
+                               complicationFamily:".utilitarianSmall",
+                               abbreviation:"Us",
+                               imageName:"Us")
         complications.append(Uss)
 
     }
