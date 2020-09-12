@@ -24,6 +24,7 @@ struct Complication
 {
     var familyName:String = ""
     var complicationFamily:String = ""
+    var template:String = ""
     var imageProvider:String = ""
     var abbreviation:String = ""
     var image:UIImage?
@@ -31,12 +32,15 @@ struct Complication
     
     init(familyName: String,
          complicationFamily: String,
-         abbreviation: String,
-         imageName: String) {
+         template:String,
+         imageProvider: String,
+         abbreviation: String) {
         self.familyName = familyName
         self.complicationFamily = complicationFamily
+        self.template = template
+        self.imageProvider = imageProvider
         self.abbreviation = abbreviation
-        self.image = UIImage(named: imageName)
+        self.image = UIImage(named: abbreviation)
     }
 
 }

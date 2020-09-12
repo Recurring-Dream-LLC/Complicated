@@ -29,35 +29,39 @@ class Complications
     init() {
         let C = Complication(familyName:"Circular Small",
                              complicationFamily:".circularSmall",
-                             abbreviation:"Cs",
-                             imageName:"Cs")
+                             template: "CLKComplicationTemplateCircularSmallSimpleImage",
+                             imageProvider: "CLKImageProvider",
+                             abbreviation:"Cs")
         complications.append(C)
         
         let Gcc = Complication(familyName:"Graphic Corner",
-                               complicationFamily:"..graphicCorner",
-                               abbreviation:"Gco",
-                               imageName:"Gco")
+                               complicationFamily:".graphicCorner",
+                               template: "CLKComplicationTemplateGraphicCornerCircularImage",
+                               imageProvider: "CLKFullColorImageProvider",
+                               abbreviation:"Gco")
         complications.append(Gcc)
         
         let GCi = Complication(familyName:"Graphic Circular",
-                               complicationFamily:"..graphicCircular",
-                               abbreviation:"Gci",
-                               imageName:"Gci")
+                               complicationFamily:".graphicCircular",
+                               template: "CLKComplicationTemplateGraphicCircularImage",
+                               imageProvider: "CLKFullColorImageProvider",
+                               abbreviation:"Gci")
         complications.append(GCi)
         
         let Ms = Complication(familyName:"Modular Small",
                               complicationFamily:".modularSmall",
-                              abbreviation:"Ms",
-                              imageName:"Ms")
+                              template: "CLKComplicationTemplateModularSmallSimpleImage",
+                              imageProvider: "CLKImageProvider",
+                              abbreviation:"Ms")
         complications.append(Ms)
 
         let Uss = Complication(familyName:"Utilitarian Small",
                                complicationFamily:".utilitarianSmall",
-                               abbreviation:"Us",
-                               imageName:"Us")
+                               template: "CLKComplicationTemplateUtilitarianSmallSquare",
+                               imageProvider: "CLKImageProvider",
+                               abbreviation:"Us")
         complications.append(Uss)
 
     }
 }
-
 

@@ -11,7 +11,9 @@ import UIKit
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var image: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet var complicationFamilyLabel: UILabel!
+    @IBOutlet var imageProviderLabel: UILabel!
+    @IBOutlet var templateLabel: UILabel!
     
     var complication: Complication?
 
@@ -23,7 +25,9 @@ class DetailViewController: UIViewController {
         if (complication != nil)
         {
             image.image = complication?.image
-            nameLabel.text = complication?.familyName
+            complicationFamilyLabel.text = complication?.complicationFamily
+            imageProviderLabel.text = complication?.imageProvider
+            templateLabel.text = complication?.template
             self.navigationItem.title = complication?.familyName
 
         }
