@@ -16,6 +16,7 @@ struct ComplicationDetail: View {
             complication.image
                 .resizable()
                 .frame(width: 80, height: 80)
+                .padding()
             HStack{
                 Text("Family Name")
                     .font(.body)
@@ -49,7 +50,7 @@ struct ComplicationDetail: View {
             }.padding()
 
             Spacer()
-        }
+        }.navigationBarTitleDisplayMode(.inline)
     }
 }
 
