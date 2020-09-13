@@ -16,18 +16,19 @@ import WatchKit
 import UIKit
 #endif
 
+import SwiftUI
 
 //╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍
 //
 //╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍
-struct Complication
+struct Complication: Hashable, Codable, Identifiable
 {
+    var id:String = ""
     var familyName:String = ""
     var complicationFamily:String = ""
     var template:String = ""
     var imageProvider:String = ""
-    var abbreviation:String = ""
-    var image:UIImage?
+    fileprivate var abbreviation:String = ""
     
     
     init(familyName: String,
@@ -35,12 +36,19 @@ struct Complication
          template:String,
          imageProvider: String,
          abbreviation: String) {
+        self.id = abbreviation
         self.familyName = familyName
         self.complicationFamily = complicationFamily
         self.template = template
         self.imageProvider = imageProvider
         self.abbreviation = abbreviation
-        self.image = UIImage(named: abbreviation)
     }
 
+}
+
+
+extension Complication {
+    var image: Image {
+        Image(abbreviation)
+    }
 }

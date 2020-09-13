@@ -7,22 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		726708DD2502DEF80050C8E2 /* ComplicationImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 726708DC2502DEF80050C8E2 /* ComplicationImages.xcassets */; };
 		726708DE2502DEF80050C8E2 /* ComplicationImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 726708DC2502DEF80050C8E2 /* ComplicationImages.xcassets */; };
 		726708DF2502DEF80050C8E2 /* ComplicationImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 726708DC2502DEF80050C8E2 /* ComplicationImages.xcassets */; };
-		7292104224730AA0008CFCB1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7292104124730AA0008CFCB1 /* DetailViewController.swift */; };
-		72B46A9724685F2300DBD1C8 /* Complications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B46A9624685F2300DBD1C8 /* Complications.swift */; };
-		72B46A9924685F3400DBD1C8 /* Complication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B46A9824685F3400DBD1C8 /* Complication.swift */; };
 		72B46A9A24685F3D00DBD1C8 /* Complications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B46A9624685F2300DBD1C8 /* Complications.swift */; };
 		72B46A9B24685F4000DBD1C8 /* Complication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B46A9824685F3400DBD1C8 /* Complication.swift */; };
-		72B46A9D246991BF00DBD1C8 /* ComplicationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B46A9C246991BF00DBD1C8 /* ComplicationsTableViewController.swift */; };
-		72B46A9F2469938300DBD1C8 /* ComplicationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B46A9E2469938300DBD1C8 /* ComplicationTableViewCell.swift */; };
-		72E0EC9A229B6E66006BD18F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E0EC99229B6E66006BD18F /* AppDelegate.swift */; };
-		72E0EC9C229B6E66006BD18F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E0EC9B229B6E66006BD18F /* ViewController.swift */; };
-		72E0EC9F229B6E66006BD18F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72E0EC9D229B6E66006BD18F /* Main.storyboard */; };
-		72E0ECA1229B6E67006BD18F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72E0ECA0229B6E67006BD18F /* Assets.xcassets */; };
-		72E0ECA4229B6E67006BD18F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72E0ECA2229B6E67006BD18F /* LaunchScreen.storyboard */; };
-		72E0ECA9229B6E67006BD18F /* Complicated WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 72E0ECA8229B6E67006BD18F /* Complicated WatchKit App.app */; };
+		72CEB97F250D8EA200FCFDAA /* ComplicatedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CEB97E250D8EA200FCFDAA /* ComplicatedApp.swift */; };
+		72CEB981250D8EA200FCFDAA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CEB980250D8EA200FCFDAA /* ContentView.swift */; };
+		72CEB983250D8EA400FCFDAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72CEB982250D8EA400FCFDAA /* Assets.xcassets */; };
+		72CEB986250D8EA400FCFDAA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72CEB985250D8EA400FCFDAA /* Preview Assets.xcassets */; };
+		72CEB98B250D8F3400FCFDAA /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F6AD1A22A1EA690079C75B /* AppColors.swift */; };
+		72CEB98C250D8F3C00FCFDAA /* Complications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B46A9624685F2300DBD1C8 /* Complications.swift */; };
+		72CEB98D250D8F3F00FCFDAA /* Complication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B46A9824685F3400DBD1C8 /* Complication.swift */; };
+		72CEB98E250D8F4100FCFDAA /* ComplicationImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 726708DC2502DEF80050C8E2 /* ComplicationImages.xcassets */; };
+		72D15773250EB40F004AAF1B /* ComplicationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D15772250EB40F004AAF1B /* ComplicationRow.swift */; };
+		72D15775250EB6D8004AAF1B /* ComplicationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D15774250EB6D8004AAF1B /* ComplicationList.swift */; };
+		72D15777250EB88C004AAF1B /* ComplicationDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D15776250EB88C004AAF1B /* ComplicationDetail.swift */; };
+		72D15779250EC86C004AAF1B /* Complicated WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 72E0ECA8229B6E67006BD18F /* Complicated WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		72D1577E250ECC4A004AAF1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72D1577D250ECC4A004AAF1B /* LaunchScreen.storyboard */; };
 		72E0ECAF229B6E67006BD18F /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72E0ECAD229B6E67006BD18F /* Interface.storyboard */; };
 		72E0ECB1229B6E68006BD18F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72E0ECB0229B6E68006BD18F /* Assets.xcassets */; };
 		72E0ECB8229B6E68006BD18F /* Complicated WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 72E0ECB7229B6E68006BD18F /* Complicated WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -30,13 +31,12 @@
 		72E0ECBF229B6E68006BD18F /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E0ECBE229B6E68006BD18F /* ExtensionDelegate.swift */; };
 		72E0ECC1229B6E68006BD18F /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E0ECC0229B6E68006BD18F /* ComplicationController.swift */; };
 		72E0ECC3229B6E68006BD18F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72E0ECC2229B6E68006BD18F /* Assets.xcassets */; };
-		72F6AD1B22A1EA690079C75B /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F6AD1A22A1EA690079C75B /* AppColors.swift */; };
 		72F6AD1C22A1EABA0079C75B /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F6AD1A22A1EA690079C75B /* AppColors.swift */; };
 		72F6AD1D22A343270079C75B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72E0ECC2229B6E68006BD18F /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		72E0ECAA229B6E67006BD18F /* PBXContainerItemProxy */ = {
+		72D1577A250EC86C004AAF1B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 72E0EC8E229B6E66006BD18F /* Project object */;
 			proxyType = 1;
@@ -53,6 +53,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		72D1577C250EC86C004AAF1B /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				72D15779250EC86C004AAF1B /* Complicated WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		72E0ECCA229B6E68006BD18F /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -64,33 +75,22 @@
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		72E0ECCE229B6E68006BD18F /* Embed Watch Content */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
-			dstSubfolderSpec = 16;
-			files = (
-				72E0ECA9229B6E67006BD18F /* Complicated WatchKit App.app in Embed Watch Content */,
-			);
-			name = "Embed Watch Content";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		726708DC2502DEF80050C8E2 /* ComplicationImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ComplicationImages.xcassets; sourceTree = "<group>"; };
-		7292104124730AA0008CFCB1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		72B46A9624685F2300DBD1C8 /* Complications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Complications.swift; sourceTree = "<group>"; };
 		72B46A9824685F3400DBD1C8 /* Complication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Complication.swift; sourceTree = "<group>"; };
-		72B46A9C246991BF00DBD1C8 /* ComplicationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationsTableViewController.swift; sourceTree = "<group>"; };
-		72B46A9E2469938300DBD1C8 /* ComplicationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationTableViewCell.swift; sourceTree = "<group>"; };
-		72E0EC96229B6E66006BD18F /* Complicated.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Complicated.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		72E0EC99229B6E66006BD18F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		72E0EC9B229B6E66006BD18F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		72E0EC9E229B6E66006BD18F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		72E0ECA0229B6E67006BD18F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		72E0ECA3229B6E67006BD18F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		72E0ECA5229B6E67006BD18F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72CEB97C250D8EA200FCFDAA /* Complicated.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Complicated.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		72CEB97E250D8EA200FCFDAA /* ComplicatedApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicatedApp.swift; sourceTree = "<group>"; };
+		72CEB980250D8EA200FCFDAA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		72CEB982250D8EA400FCFDAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		72CEB985250D8EA400FCFDAA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		72CEB987250D8EA400FCFDAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72D15772250EB40F004AAF1B /* ComplicationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationRow.swift; sourceTree = "<group>"; };
+		72D15774250EB6D8004AAF1B /* ComplicationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationList.swift; sourceTree = "<group>"; };
+		72D15776250EB88C004AAF1B /* ComplicationDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationDetail.swift; sourceTree = "<group>"; };
+		72D1577D250ECC4A004AAF1B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		72E0ECA8229B6E67006BD18F /* Complicated WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Complicated WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72E0ECAE229B6E67006BD18F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		72E0ECB0229B6E68006BD18F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		72E0EC93229B6E66006BD18F /* Frameworks */ = {
+		72CEB979250D8EA200FCFDAA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,41 +122,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		72CEB97D250D8EA200FCFDAA /* Complicated */ = {
+			isa = PBXGroup;
+			children = (
+				72CEB97E250D8EA200FCFDAA /* ComplicatedApp.swift */,
+				72D15772250EB40F004AAF1B /* ComplicationRow.swift */,
+				72D15774250EB6D8004AAF1B /* ComplicationList.swift */,
+				72D15776250EB88C004AAF1B /* ComplicationDetail.swift */,
+				72CEB980250D8EA200FCFDAA /* ContentView.swift */,
+				72CEB982250D8EA400FCFDAA /* Assets.xcassets */,
+				72CEB987250D8EA400FCFDAA /* Info.plist */,
+				72D1577D250ECC4A004AAF1B /* LaunchScreen.storyboard */,
+				72CEB984250D8EA400FCFDAA /* Preview Content */,
+			);
+			path = Complicated;
+			sourceTree = "<group>";
+		};
+		72CEB984250D8EA400FCFDAA /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				72CEB985250D8EA400FCFDAA /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		72D15778250EC86C004AAF1B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		72E0EC8D229B6E66006BD18F = {
 			isa = PBXGroup;
 			children = (
-				72E0EC98229B6E66006BD18F /* Complicated */,
+				72CEB97D250D8EA200FCFDAA /* Complicated */,
 				72F6AD1922A1EA3F0079C75B /* Shared */,
 				72E0ECAC229B6E67006BD18F /* Complicated WatchKit App */,
 				72E0ECBB229B6E68006BD18F /* Complicated WatchKit Extension */,
 				72E0EC97229B6E66006BD18F /* Products */,
+				72D15778250EC86C004AAF1B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		72E0EC97229B6E66006BD18F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				72E0EC96229B6E66006BD18F /* Complicated.app */,
 				72E0ECA8229B6E67006BD18F /* Complicated WatchKit App.app */,
 				72E0ECB7229B6E68006BD18F /* Complicated WatchKit Extension.appex */,
+				72CEB97C250D8EA200FCFDAA /* Complicated.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		72E0EC98229B6E66006BD18F /* Complicated */ = {
-			isa = PBXGroup;
-			children = (
-				72E0EC99229B6E66006BD18F /* AppDelegate.swift */,
-				72E0EC9B229B6E66006BD18F /* ViewController.swift */,
-				72B46A9C246991BF00DBD1C8 /* ComplicationsTableViewController.swift */,
-				72B46A9E2469938300DBD1C8 /* ComplicationTableViewCell.swift */,
-				7292104124730AA0008CFCB1 /* DetailViewController.swift */,
-				72E0ECA0229B6E67006BD18F /* Assets.xcassets */,
-				72E0EC9D229B6E66006BD18F /* Main.storyboard */,
-				72E0ECA2229B6E67006BD18F /* LaunchScreen.storyboard */,
-				72E0ECA5229B6E67006BD18F /* Info.plist */,
-			);
-			path = Complicated;
 			sourceTree = "<group>";
 		};
 		72E0ECAC229B6E67006BD18F /* Complicated WatchKit App */ = {
@@ -195,23 +211,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		72E0EC95229B6E66006BD18F /* Complicated */ = {
+		72CEB97B250D8EA200FCFDAA /* Complicated */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 72E0ECCF229B6E68006BD18F /* Build configuration list for PBXNativeTarget "Complicated" */;
+			buildConfigurationList = 72CEB98A250D8EA400FCFDAA /* Build configuration list for PBXNativeTarget "Complicated" */;
 			buildPhases = (
-				72E0EC92229B6E66006BD18F /* Sources */,
-				72E0EC93229B6E66006BD18F /* Frameworks */,
-				72E0EC94229B6E66006BD18F /* Resources */,
-				72E0ECCE229B6E68006BD18F /* Embed Watch Content */,
+				72CEB978250D8EA200FCFDAA /* Sources */,
+				72CEB979250D8EA200FCFDAA /* Frameworks */,
+				72CEB97A250D8EA200FCFDAA /* Resources */,
+				72D1577C250EC86C004AAF1B /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				72E0ECAB229B6E67006BD18F /* PBXTargetDependency */,
+				72D1577B250EC86C004AAF1B /* PBXTargetDependency */,
 			);
 			name = Complicated;
-			productName = Complicated;
-			productReference = 72E0EC96229B6E66006BD18F /* Complicated.app */;
+			productName = ComplicatedUI;
+			productReference = 72CEB97C250D8EA200FCFDAA /* Complicated.app */;
 			productType = "com.apple.product-type.application";
 		};
 		72E0ECA7229B6E67006BD18F /* Complicated WatchKit App */ = {
@@ -254,12 +270,12 @@
 		72E0EC8E229B6E66006BD18F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1020;
-				LastUpgradeCheck = 1020;
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Recurring Dream LLC";
 				TargetAttributes = {
-					72E0EC95229B6E66006BD18F = {
-						CreatedOnToolsVersion = 10.2.1;
+					72CEB97B250D8EA200FCFDAA = {
+						CreatedOnToolsVersion = 12.0;
 					};
 					72E0ECA7229B6E67006BD18F = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -282,7 +298,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				72E0EC95229B6E66006BD18F /* Complicated */,
+				72CEB97B250D8EA200FCFDAA /* Complicated */,
 				72E0ECA7229B6E67006BD18F /* Complicated WatchKit App */,
 				72E0ECB6229B6E68006BD18F /* Complicated WatchKit Extension */,
 			);
@@ -290,14 +306,14 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		72E0EC94229B6E66006BD18F /* Resources */ = {
+		72CEB97A250D8EA200FCFDAA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72E0ECA4229B6E67006BD18F /* LaunchScreen.storyboard in Resources */,
-				72E0ECA1229B6E67006BD18F /* Assets.xcassets in Resources */,
-				72E0EC9F229B6E66006BD18F /* Main.storyboard in Resources */,
-				726708DD2502DEF80050C8E2 /* ComplicationImages.xcassets in Resources */,
+				72CEB986250D8EA400FCFDAA /* Preview Assets.xcassets in Resources */,
+				72D1577E250ECC4A004AAF1B /* LaunchScreen.storyboard in Resources */,
+				72CEB98E250D8F4100FCFDAA /* ComplicationImages.xcassets in Resources */,
+				72CEB983250D8EA400FCFDAA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,18 +340,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		72E0EC92229B6E66006BD18F /* Sources */ = {
+		72CEB978250D8EA200FCFDAA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72F6AD1B22A1EA690079C75B /* AppColors.swift in Sources */,
-				72E0EC9C229B6E66006BD18F /* ViewController.swift in Sources */,
-				72E0EC9A229B6E66006BD18F /* AppDelegate.swift in Sources */,
-				72B46A9F2469938300DBD1C8 /* ComplicationTableViewCell.swift in Sources */,
-				72B46A9D246991BF00DBD1C8 /* ComplicationsTableViewController.swift in Sources */,
-				72B46A9924685F3400DBD1C8 /* Complication.swift in Sources */,
-				72B46A9724685F2300DBD1C8 /* Complications.swift in Sources */,
-				7292104224730AA0008CFCB1 /* DetailViewController.swift in Sources */,
+				72D15777250EB88C004AAF1B /* ComplicationDetail.swift in Sources */,
+				72CEB98B250D8F3400FCFDAA /* AppColors.swift in Sources */,
+				72CEB981250D8EA200FCFDAA /* ContentView.swift in Sources */,
+				72CEB97F250D8EA200FCFDAA /* ComplicatedApp.swift in Sources */,
+				72CEB98D250D8F3F00FCFDAA /* Complication.swift in Sources */,
+				72D15773250EB40F004AAF1B /* ComplicationRow.swift in Sources */,
+				72D15775250EB6D8004AAF1B /* ComplicationList.swift in Sources */,
+				72CEB98C250D8F3C00FCFDAA /* Complications.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,10 +371,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		72E0ECAB229B6E67006BD18F /* PBXTargetDependency */ = {
+		72D1577B250EC86C004AAF1B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 72E0ECA7229B6E67006BD18F /* Complicated WatchKit App */;
-			targetProxy = 72E0ECAA229B6E67006BD18F /* PBXContainerItemProxy */;
+			targetProxy = 72D1577A250EC86C004AAF1B /* PBXContainerItemProxy */;
 		};
 		72E0ECBA229B6E68006BD18F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -368,22 +384,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		72E0EC9D229B6E66006BD18F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				72E0EC9E229B6E66006BD18F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		72E0ECA2229B6E67006BD18F /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				72E0ECA3229B6E67006BD18F /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 		72E0ECAD229B6E67006BD18F /* Interface.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -395,6 +395,52 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		72CEB988250D8EA400FCFDAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "Complicated/Preview\\ Content";
+				DEVELOPMENT_TEAM = GAU3F6PUXE;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Complicated/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.recurringdream.Complicated;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		72CEB989250D8EA400FCFDAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "Complicated/Preview\\ Content";
+				DEVELOPMENT_TEAM = GAU3F6PUXE;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Complicated/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.recurringdream.Complicated;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		72E0ECC5229B6E68006BD18F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -421,6 +467,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -482,6 +529,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -593,47 +641,18 @@
 			};
 			name = Release;
 		};
-		72E0ECD0229B6E68006BD18F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GAU3F6PUXE;
-				INFOPLIST_FILE = Complicated/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.recurringdream.Complicated;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Debug;
-		};
-		72E0ECD1229B6E68006BD18F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GAU3F6PUXE;
-				INFOPLIST_FILE = Complicated/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.recurringdream.Complicated;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		72CEB98A250D8EA400FCFDAA /* Build configuration list for PBXNativeTarget "Complicated" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72CEB988250D8EA400FCFDAA /* Debug */,
+				72CEB989250D8EA400FCFDAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		72E0EC91229B6E66006BD18F /* Build configuration list for PBXProject "Complicated" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -657,15 +676,6 @@
 			buildConfigurations = (
 				72E0ECCC229B6E68006BD18F /* Debug */,
 				72E0ECCD229B6E68006BD18F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		72E0ECCF229B6E68006BD18F /* Build configuration list for PBXNativeTarget "Complicated" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				72E0ECD0229B6E68006BD18F /* Debug */,
-				72E0ECD1229B6E68006BD18F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
