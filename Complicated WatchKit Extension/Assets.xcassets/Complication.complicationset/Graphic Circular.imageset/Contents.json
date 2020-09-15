@@ -1,19 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "complicationGraphicCircular42@2x.png",
       "idiom" : "watch",
       "scale" : "2x",
       "screen-width" : "<=145"
     },
     {
-      "filename" : "complicationGraphicCircular42@2x-1.png",
+      "filename" : "complicationGraphicCircular42@2x.png",
       "idiom" : "watch",
       "scale" : "2x",
       "screen-width" : ">161"
     },
     {
-      "filename" : "complicationGraphicCircular42@2x-2.png",
       "idiom" : "watch",
       "scale" : "2x",
       "screen-width" : ">145"
