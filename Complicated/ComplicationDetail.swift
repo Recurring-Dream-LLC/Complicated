@@ -12,43 +12,91 @@ struct ComplicationDetail: View {
     var complication:Complication
     
     var body: some View {
-        VStack{
+        VStack(spacing: -5){
             complication.image
                 .resizable()
                 .frame(width: 80, height: 80)
                 .padding()
-            HStack{
-                Text("Family Name")
-                    .font(.body)
-                    .foregroundColor(Color.gray)
-                Spacer()
-                Text(complication.familyName)
-                    .font(.system(.body, design: .monospaced))
-                    .foregroundColor(Color.blue)
-            }.padding()
             
             HStack{
-                Text("Image Provider")
-                    .font(.body)
-                    .foregroundColor(Color.gray)
+                Text("Information")
+                    .font(.title2)
+                    .fontWeight(.bold)
                 Spacer()
-                Text(complication.imageProvider)
-                    .font(.system(.body, design: .monospaced))
-                    .foregroundColor(Color.blue)
-
+            }.padding()
+            
+            Group {
+                HStack{
+                    Text("Family Name")
+                        .font(.body)
+                        .foregroundColor(Color(.secondaryLabel))
+                    Spacer()
+                    Text(complication.familyName)
+                        .font(.body)
+                        .foregroundColor(Color(.label))
+                }.padding()
+                Divider()
+            }
+            
+            Group{
+                HStack{
+                    Text("Image Provider")
+                        .font(.body)
+                        .foregroundColor(Color(.secondaryLabel))
+                    Spacer()
+                    Text(complication.imageProvider)
+                        .font(.body)
+                        .foregroundColor(Color(.link))
+                    
+                }.padding()
+                Divider()
+            }
+            
+            Group{
+                VStack(alignment: .leading){
+                    Text("Template")
+                        .font(.body)
+                        .foregroundColor(Color(.secondaryLabel))
+                        .multilineTextAlignment(.leading)
+                    
+                    Text(complication.template)
+                        .font(.body)
+                        .foregroundColor(Color(.link))
+                        .multilineTextAlignment(.trailing)
+                    
+                }.padding()
+                Divider()
+            }
+            
+            Group{
+                HStack{
+                    Text("Tintable")
+                        .font(.body)
+                        .foregroundColor(Color(.secondaryLabel))
+                    Spacer()
+                    Text("Yes")
+                        .font(.body)
+                        .foregroundColor(Color(.label))
+                    
+                }.padding()
+                Divider()
+            }
+            
+            
+            HStack{
+                Text("Sample Faces")
+                    .font(.title2)
+                    .fontWeight(.bold)
+                Spacer()
             }.padding()
 
             HStack{
-                Text("Template")
-                    .font(.body)
-                    .foregroundColor(Color.gray)
-                Spacer()
-                Text(complication.template)
-                    .font(.system(.body, design: .monospaced))
-                    .foregroundColor(Color.blue)
+                    Image("Cgo.png")
+                        .frame(width: 80, height: 80)
 
             }.padding()
 
+            
             Spacer()
         }.navigationBarTitleDisplayMode(.inline)
     }
