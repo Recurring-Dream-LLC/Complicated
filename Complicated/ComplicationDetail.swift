@@ -44,9 +44,10 @@ struct ComplicationDetail: View {
                         .font(.body)
                         .foregroundColor(Color(.secondaryLabel))
                     Spacer()
-                    Text(complication.imageProvider)
+                    Link(complication.imageProvider, destination:  complication.imageProviderDocumentation)
                         .font(.body)
-                        .foregroundColor(Color(.link))
+                        .minimumScaleFactor(0.5)
+                        .lineLimit(1)
                     
                 }.padding()
                 Divider()
@@ -58,11 +59,11 @@ struct ComplicationDetail: View {
                         .font(.body)
                         .foregroundColor(Color(.secondaryLabel))
                         .multilineTextAlignment(.leading)
-                    
-                    Text(complication.template)
+                    Link(complication.template, destination: complication.templateDocumentation)
                         .font(.body)
-                        .foregroundColor(Color(.link))
-                        .multilineTextAlignment(.trailing)
+                        .minimumScaleFactor(0.5)
+                        .lineLimit(1)
+                       .multilineTextAlignment(.trailing)
                         
                     
                 }.padding()

@@ -15,8 +15,30 @@ import WatchKit
 //#if os(iOS)
 //import UIKit
 //#endif
-
+//
 let complications:[Complication] = loadComplications()
+
+// template constants
+let CLKComplicationTemplateCircularSmallSimpleImageName = "CLKComplicationTemplateCircularSmallSimpleImage"
+let CLKComplicationTemplateCircularSmallSimpleImageDocumentation = URL(string: "https://developer.apple.com/documentation/clockkit/clkcomplicationtemplatecircularsmallsimpleimage")!
+
+let CLKComplicationTemplateGraphicCornerCircularImageName = "CLKComplicationTemplateGraphicCornerCircularImage"
+let CLKComplicationTemplateGraphicCornerCircularImageDocumentation = URL(string: "https://developer.apple.com/documentation/clockkit/clkcomplicationtemplategraphiccornercircularimage")!
+
+let CLKComplicationTemplateGraphicCircularImageName = "CLKComplicationTemplateGraphicCircularImage"
+let CLKComplicationTemplateGraphicCircularImageDocumentation = URL(string: "https://developer.apple.com/documentation/clockkit/clkcomplicationtemplategraphiccircularimage")!
+
+let CLKComplicationTemplateUtilitarianSmallSquareName = "CLKComplicationTemplateUtilitarianSmallSquare"
+let CLKComplicationTemplateUtilitarianSmallSquareDocumentation = URL(string: "https://developer.apple.com/documentation/clockkit/clkcomplicationtemplateutilitariansmallsquare")!
+
+// image provider constants
+
+let CLKImageProviderName = "CLKImageProvider"
+let CLKImageProviderDocumentation = URL(string: "https://developer.apple.com/documentation/clockkit/clkimageprovider")!
+
+let CLKFullColorImageProviderName = "CLKFullColorImageProvider"
+let CLKFullColorImageProviderDocumentation = URL(string: "https://developer.apple.com/documentation/clockkit/clkfullcolorimageprovider")!
+
 
 //——————————————————————————————————————————————————————————————————————————————
 //
@@ -26,81 +48,44 @@ func loadComplications()->[Complication]
     var complications: [Complication] = []
     complications.append(Complication(familyName:"Circular Small",
                          complicationFamily:".circularSmall",
-                         template: "CLKComplicationTemplateCircularSmallSimpleImage",
-                         imageProvider: "CLKImageProvider",
+                         template: CLKComplicationTemplateCircularSmallSimpleImageName,
+                         templateDocumentation: CLKComplicationTemplateCircularSmallSimpleImageDocumentation,
+                         imageProvider: CLKImageProviderName,
+                         imageProviderDocumentation: CLKImageProviderDocumentation,
                          abbreviation:"Cs"))
-    
+
     complications.append(Complication(familyName:"Graphic Corner",
                            complicationFamily:".graphicCorner",
-                           template: "CLKComplicationTemplateGraphicCornerCircularImage",
-                           imageProvider: "CLKFullColorImageProvider",
+                           template: CLKComplicationTemplateGraphicCornerCircularImageName,
+                           templateDocumentation: CLKComplicationTemplateGraphicCornerCircularImageDocumentation,
+                           imageProvider: CLKFullColorImageProviderName,
+                           imageProviderDocumentation: CLKFullColorImageProviderDocumentation,
                            abbreviation:"Gco"))
-    
+
     complications.append(Complication(familyName:"Graphic Circular",
                            complicationFamily:".graphicCircular",
-                           template: "CLKComplicationTemplateGraphicCircularImage",
-                           imageProvider: "CLKFullColorImageProvider",
+                           template: CLKComplicationTemplateGraphicCircularImageName,
+                           templateDocumentation: CLKComplicationTemplateGraphicCircularImageDocumentation,
+                           imageProvider: CLKFullColorImageProviderName,
+                           imageProviderDocumentation:CLKFullColorImageProviderDocumentation,
                            abbreviation:"Gci"))
-    
+
     complications.append(Complication(familyName:"Modular Small",
                           complicationFamily:".modularSmall",
-                          template: "CLKComplicationTemplateModularSmallSimpleImage",
-                          imageProvider: "CLKImageProvider",
+                          template: CLKComplicationTemplateCircularSmallSimpleImageName,
+                          templateDocumentation: CLKComplicationTemplateCircularSmallSimpleImageDocumentation,
+                          imageProvider: CLKImageProviderName,
+                          imageProviderDocumentation: CLKImageProviderDocumentation,
                           abbreviation:"Ms"))
-    
+
     complications.append(Complication(familyName:"Utilitarian Small",
                            complicationFamily:".utilitarianSmall",
-                           template: "CLKComplicationTemplateUtilitarianSmallSquare",
-                           imageProvider: "CLKImageProvider",
+                           template: CLKComplicationTemplateUtilitarianSmallSquareName,
+                           templateDocumentation: CLKComplicationTemplateUtilitarianSmallSquareDocumentation,
+                           imageProvider: CLKImageProviderName,
+                           imageProviderDocumentation: CLKImageProviderDocumentation,
                            abbreviation:"Us"))
     return complications
 }
 
-//╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍
-//
-//╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍
-class Complications
-{
-    static let sharedInstance = Complications()
-    
-    var complications = [Complication]()
-    
-    init() {
-        let C = Complication(familyName:"Circular Small",
-                             complicationFamily:".circularSmall",
-                             template: "CLKComplicationTemplateCircularSmallSimpleImage",
-                             imageProvider: "CLKImageProvider",
-                             abbreviation:"Cs")
-        complications.append(C)
-        
-        let Gcc = Complication(familyName:"Graphic Corner",
-                               complicationFamily:".graphicCorner",
-                               template: "CLKComplicationTemplateGraphicCornerCircularImage",
-                               imageProvider: "CLKFullColorImageProvider",
-                               abbreviation:"Gco")
-        complications.append(Gcc)
-        
-        let GCi = Complication(familyName:"Graphic Circular",
-                               complicationFamily:".graphicCircular",
-                               template: "CLKComplicationTemplateGraphicCircularImage",
-                               imageProvider: "CLKFullColorImageProvider",
-                               abbreviation:"Gci")
-        complications.append(GCi)
-        
-        let Ms = Complication(familyName:"Modular Small",
-                              complicationFamily:".modularSmall",
-                              template: "CLKComplicationTemplateModularSmallSimpleImage",
-                              imageProvider: "CLKImageProvider",
-                              abbreviation:"Ms")
-        complications.append(Ms)
-
-        let Uss = Complication(familyName:"Utilitarian Small",
-                               complicationFamily:".utilitarianSmall",
-                               template: "CLKComplicationTemplateUtilitarianSmallSquare",
-                               imageProvider: "CLKImageProvider",
-                               abbreviation:"Us")
-        complications.append(Uss)
-
-    }
-}
 
