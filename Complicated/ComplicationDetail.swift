@@ -63,6 +63,7 @@ struct ComplicationDetail: View {
                         .font(.body)
                         .foregroundColor(Color(.link))
                         .multilineTextAlignment(.trailing)
+                        
                     
                 }.padding()
                 Divider()
@@ -82,19 +83,14 @@ struct ComplicationDetail: View {
                 Divider()
             }
             
-            
-            HStack{
-                Text("Sample Faces")
-                    .font(.title2)
-                    .fontWeight(.bold)
-                Spacer()
-            }.padding()
-
-            HStack{
-                    Image("Cgo.png")
-                        .frame(width: 80, height: 80)
-
-            }.padding()
+//            
+//            HStack{
+//                Text("Sample Faces")
+//                    .font(.title2)
+//                    .fontWeight(.bold)
+//                Spacer()
+//            }.padding()
+//
 
             
             Spacer()
