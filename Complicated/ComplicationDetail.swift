@@ -8,6 +8,48 @@
 
 import SwiftUI
 
+struct DetailRow: View{
+    var title:String
+    var detail:String
+    
+    var body: some View {
+        HStack{
+            Text(title)
+                .font(.body)
+                .foregroundColor(Color(.secondaryLabel))
+            Spacer()
+            Text(detail)
+                .font(.body)
+                .foregroundColor(Color(.label))
+                .minimumScaleFactor(0.5)
+                .lineLimit(1)
+        }.padding()
+        Divider()
+    }
+}
+
+
+struct DetailRowLinked: View{
+    var title:String
+    var linkTitle:String
+    var link:URL
+    
+    var body: some View {
+        HStack{
+            Text(title)
+                .font(.body)
+                .foregroundColor(Color(.secondaryLabel))
+            Spacer()
+            Link(linkTitle, destination: link)
+                .font(.body)
+                .minimumScaleFactor(0.5)
+                .lineLimit(1)
+            
+        }.padding()
+        Divider()
+    }
+}
+
 struct ComplicationDetail: View {
     var complication:Complication
     
@@ -25,33 +67,9 @@ struct ComplicationDetail: View {
                 Spacer()
             }.padding()
             
-            Group {
-                HStack{
-                    Text("Family Name")
-                        .font(.body)
-                        .foregroundColor(Color(.secondaryLabel))
-                    Spacer()
-                    Text(complication.familyName)
-                        .font(.body)
-                        .foregroundColor(Color(.label))
-                }.padding()
-                Divider()
-            }
+            DetailRow(title: "Family Name", detail: complication.familyName)
             
-            Group{
-                HStack{
-                    Text("Image Provider")
-                        .font(.body)
-                        .foregroundColor(Color(.secondaryLabel))
-                    Spacer()
-                    Link(complication.imageProvider, destination:  complication.imageProviderDocumentation)
-                        .font(.body)
-                        .minimumScaleFactor(0.5)
-                        .lineLimit(1)
-                    
-                }.padding()
-                Divider()
-            }
+            DetailRowLinked(title: "ImageProvider",linkTitle: complication.imageProvider,link: complication.imageProviderDocumentation)
             
             Group{
                 VStack(alignment: .leading){
@@ -70,29 +88,7 @@ struct ComplicationDetail: View {
                 Divider()
             }
             
-            Group{
-                HStack{
-                    Text("Tintable")
-                        .font(.body)
-                        .foregroundColor(Color(.secondaryLabel))
-                    Spacer()
-                    Text("Yes")
-                        .font(.body)
-                        .foregroundColor(Color(.label))
-                    
-                }.padding()
-                Divider()
-            }
-            
-//            
-//            HStack{
-//                Text("Sample Faces")
-//                    .font(.title2)
-//                    .fontWeight(.bold)
-//                Spacer()
-//            }.padding()
-//
-
+            DetailRow(title: "Tintable", detail: "Yes")
             
             Spacer()
         }.navigationBarTitleDisplayMode(.inline)
@@ -104,9 +100,9 @@ struct ComplicationDetail_Previews: PreviewProvider {
         Group {
             ComplicationDetail(complication: complications[0])
                 .preferredColorScheme(.dark)
-                .previewDevice(PreviewDevice(rawValue: "iPhone SE"))
-            ComplicationDetail(complication: complications[0])
-                .previewDevice(PreviewDevice(rawValue: "iPhone XS Max"))
+                .previewDevice(PreviewDevice(rawValue: "iPhone 12 mini"))
+//            ComplicationDetail(complication: complications[0])
+//                .previewDevice(PreviewDevice(rawValue: "iPhone XS Max"))
             
 
         }
