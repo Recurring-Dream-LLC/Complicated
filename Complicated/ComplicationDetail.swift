@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+
 struct DetailRow: View{
     var title:String
     var detail:String
@@ -44,13 +45,35 @@ struct DetailRowLinked: View{
                 .font(.body)
                 .minimumScaleFactor(0.5)
                 .lineLimit(1)
-            
+        }.padding()
+        Divider()
+    }
+}
+
+struct DetailRowTwolineLinked: View{
+    var title:String
+    var linkTitle:String
+    var link:URL
+    
+    var body: some View {
+        VStack(alignment: .leading){
+            Text(title)
+                .font(.body)
+                .foregroundColor(Color(.secondaryLabel))
+                .multilineTextAlignment(.leading)
+            Link(linkTitle, destination: link)
+                .font(.body)
+                .minimumScaleFactor(0.5)
+                .lineLimit(1)
+               .multilineTextAlignment(.trailing)
         }.padding()
         Divider()
     }
 }
 
 struct ComplicationDetail: View {
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass : UserInterfaceSizeClass?
+
     var complication:Complication
     
     var body: some View {
@@ -71,26 +94,18 @@ struct ComplicationDetail: View {
             
             DetailRowLinked(title: "ImageProvider",linkTitle: complication.imageProvider,link: complication.imageProviderDocumentation)
             
-            Group{
-                VStack(alignment: .leading){
-                    Text("Template")
-                        .font(.body)
-                        .foregroundColor(Color(.secondaryLabel))
-                        .multilineTextAlignment(.leading)
-                    Link(complication.template, destination: complication.templateDocumentation)
-                        .font(.body)
-                        .minimumScaleFactor(0.5)
-                        .lineLimit(1)
-                       .multilineTextAlignment(.trailing)
-                        
-                    
-                }.padding()
-                Divider()
+            if horizontalSizeClass == .compact
+            {
+                DetailRowTwolineLinked(title: "Template", linkTitle: complication.template, link: complication.templateDocumentation)
+            }
+            else
+            {
+                DetailRowLinked(title: "Template", linkTitle: complication.template, link: complication.templateDocumentation)
             }
             
             DetailRow(title: "Tintable", detail: "Yes")
             
-            Spacer()
+            Spacer() // Top align the VStact
         }.navigationBarTitleDisplayMode(.inline)
     }
 }
@@ -101,10 +116,9 @@ struct ComplicationDetail_Previews: PreviewProvider {
             ComplicationDetail(complication: complications[0])
                 .preferredColorScheme(.dark)
                 .previewDevice(PreviewDevice(rawValue: "iPhone 12 mini"))
-//            ComplicationDetail(complication: complications[0])
-//                .previewDevice(PreviewDevice(rawValue: "iPhone XS Max"))
-            
-
+            ComplicationDetail(complication: complications[0])
+                .preferredColorScheme(.dark)
+                .previewDevice(PreviewDevice(rawValue: "iPad Air (4th generation)"))
         }
     }
 }
