@@ -8,6 +8,10 @@
 
 import SwiftUI
 
+// idea, have a generic detail row, that
+// 1) Determines by the presense of a URL whether to show a link or not
+// 2) Measures the likely width of both lables. If both exceed 120% (OR 100% so text never shrinks?) of width, convert to two line mode.
+// Test with ipad in streching mode, to see of it dynamically reflows
 
 struct DetailRow: View{
     var title:String
@@ -56,18 +60,22 @@ struct DetailRowTwolineLinked: View{
     var link:URL
     
     var body: some View {
-        VStack(alignment: .leading){
-            Text(title)
-                .font(.body)
-                .foregroundColor(Color(.secondaryLabel))
-                .multilineTextAlignment(.leading)
-            Link(linkTitle, destination: link)
-                .font(.body)
-                .minimumScaleFactor(0.5)
-                .lineLimit(1)
-               .multilineTextAlignment(.trailing)
+        VStack(alignment: .center){
+            HStack {
+                Text(title)
+                    .font(.body)
+                    .foregroundColor(Color(.secondaryLabel))
+                Spacer()
+            }
+            HStack {
+                Spacer()
+                Link(linkTitle, destination: link)
+                    .font(.body)
+                    .minimumScaleFactor(0.5)
+                    .lineLimit(1)
+            }
         }.padding()
-        Divider()
+       Divider()
     }
 }
 
@@ -105,7 +113,7 @@ struct ComplicationDetail: View {
             
             DetailRow(title: "Tintable", detail: "Yes")
             
-            Spacer() // Top align the VStact
+            Spacer() // Top align the VStack
         }.navigationBarTitleDisplayMode(.inline)
     }
 }
