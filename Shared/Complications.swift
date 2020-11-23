@@ -18,6 +18,14 @@ import WatchKit
 //
 let complications:[Complication] = loadComplications()
 
+// family constants
+let circularSmallDocumentation = URL(string: "https://developer.apple.com/documentation/clockkit/circular_small")!
+let graphicCornerDocumentation = URL(string: "https://developer.apple.com/documentation/clockkit/graphic")!
+let graphicCircularDocumentation = URL(string: "https://developer.apple.com/documentation/clockkit/graphic")!
+let modularSmallDocumentation = URL(string: "https://developer.apple.com/documentation/clockkit/modular_small")!
+let utilitarianSmallDocumentation = URL(string: "https://developer.apple.com/documentation/clockkit/modular_small")!
+
+
 // template constants
 let CLKComplicationTemplateCircularSmallSimpleImageName = "CLKComplicationTemplateCircularSmallSimpleImage"
 let CLKComplicationTemplateCircularSmallSimpleImageDocumentation = URL(string: "https://developer.apple.com/documentation/clockkit/clkcomplicationtemplatecircularsmallsimpleimage")!
