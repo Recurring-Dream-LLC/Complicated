@@ -16,6 +16,7 @@ import SwiftUI
 struct DetailRow: View{
     var title:String
     var detail:String
+    var link:URL?
     
     var body: some View {
         HStack{
@@ -23,36 +24,27 @@ struct DetailRow: View{
                 .font(.body)
                 .foregroundColor(Color(.secondaryLabel))
             Spacer()
-            Text(detail)
-                .font(.body)
-                .foregroundColor(Color(.label))
-                .minimumScaleFactor(0.5)
-                .lineLimit(1)
+            if let link = link
+            {
+                Link(detail, destination: link)
+                    .font(.body)
+                    .minimumScaleFactor(0.5)
+                    .lineLimit(1)
+            }
+            else
+            {
+                Text(detail)
+                    .font(.body)
+                    .foregroundColor(Color(.label))
+                    .minimumScaleFactor(0.5)
+                    .lineLimit(1)
+            }
         }.padding()
         Divider()
     }
 }
 
 
-struct DetailRowLinked: View{
-    var title:String
-    var linkTitle:String
-    var link:URL
-    
-    var body: some View {
-        HStack{
-            Text(title)
-                .font(.body)
-                .foregroundColor(Color(.secondaryLabel))
-            Spacer()
-            Link(linkTitle, destination: link)
-                .font(.body)
-                .minimumScaleFactor(0.5)
-                .lineLimit(1)
-        }.padding()
-        Divider()
-    }
-}
 
 struct DetailRowTwolineLinked: View{
     var title:String
@@ -100,7 +92,7 @@ struct ComplicationDetail: View {
             
             DetailRow(title: "Family Name", detail: complication.familyName)
             
-            DetailRowLinked(title: "ImageProvider",linkTitle: complication.imageProvider,link: complication.imageProviderDocumentation)
+            DetailRow(title: "ImageProvider",detail: complication.imageProvider,link: complication.imageProviderDocumentation)
             
             if horizontalSizeClass == .compact
             {
@@ -108,7 +100,7 @@ struct ComplicationDetail: View {
             }
             else
             {
-                DetailRowLinked(title: "Template", linkTitle: complication.template, link: complication.templateDocumentation)
+                DetailRow(title: "Template", detail: complication.template, link: complication.templateDocumentation)
             }
             
             DetailRow(title: "Tintable", detail: "Yes")
