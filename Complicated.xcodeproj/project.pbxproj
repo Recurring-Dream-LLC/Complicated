@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7266733C257D5B7500E5FD8E /* ComplicatedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7266733B257D5B7500E5FD8E /* ComplicatedApp.swift */; };
+		72667341257D5BB800E5FD8E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72667340257D5BB800E5FD8E /* ContentView.swift */; };
 		726708DE2502DEF80050C8E2 /* ComplicationImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 726708DC2502DEF80050C8E2 /* ComplicationImages.xcassets */; };
 		726708DF2502DEF80050C8E2 /* ComplicationImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 726708DC2502DEF80050C8E2 /* ComplicationImages.xcassets */; };
 		72B46A9A24685F3D00DBD1C8 /* Complications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B46A9624685F2300DBD1C8 /* Complications.swift */; };
 		72B46A9B24685F4000DBD1C8 /* Complication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B46A9824685F3400DBD1C8 /* Complication.swift */; };
 		72CEB97F250D8EA200FCFDAA /* ComplicatedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CEB97E250D8EA200FCFDAA /* ComplicatedApp.swift */; };
-		72CEB981250D8EA200FCFDAA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CEB980250D8EA200FCFDAA /* ContentView.swift */; };
 		72CEB983250D8EA400FCFDAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72CEB982250D8EA400FCFDAA /* Assets.xcassets */; };
 		72CEB986250D8EA400FCFDAA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72CEB985250D8EA400FCFDAA /* Preview Assets.xcassets */; };
 		72CEB98B250D8F3400FCFDAA /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F6AD1A22A1EA690079C75B /* AppColors.swift */; };
@@ -26,8 +27,6 @@
 		72E0ECAF229B6E67006BD18F /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72E0ECAD229B6E67006BD18F /* Interface.storyboard */; };
 		72E0ECB1229B6E68006BD18F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72E0ECB0229B6E68006BD18F /* Assets.xcassets */; };
 		72E0ECB8229B6E68006BD18F /* Complicated WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 72E0ECB7229B6E68006BD18F /* Complicated WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		72E0ECBD229B6E68006BD18F /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E0ECBC229B6E68006BD18F /* InterfaceController.swift */; };
-		72E0ECBF229B6E68006BD18F /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E0ECBE229B6E68006BD18F /* ExtensionDelegate.swift */; };
 		72E0ECC1229B6E68006BD18F /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E0ECC0229B6E68006BD18F /* ComplicationController.swift */; };
 		72E0ECC3229B6E68006BD18F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72E0ECC2229B6E68006BD18F /* Assets.xcassets */; };
 		72F6AD1C22A1EABA0079C75B /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F6AD1A22A1EA690079C75B /* AppColors.swift */; };
@@ -77,12 +76,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7266733B257D5B7500E5FD8E /* ComplicatedApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicatedApp.swift; sourceTree = "<group>"; };
+		72667340257D5BB800E5FD8E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		726708DC2502DEF80050C8E2 /* ComplicationImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ComplicationImages.xcassets; sourceTree = "<group>"; };
 		72B46A9624685F2300DBD1C8 /* Complications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Complications.swift; sourceTree = "<group>"; };
 		72B46A9824685F3400DBD1C8 /* Complication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Complication.swift; sourceTree = "<group>"; };
 		72CEB97C250D8EA200FCFDAA /* Complicated.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Complicated.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72CEB97E250D8EA200FCFDAA /* ComplicatedApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicatedApp.swift; sourceTree = "<group>"; };
-		72CEB980250D8EA200FCFDAA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		72CEB982250D8EA400FCFDAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72CEB985250D8EA400FCFDAA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		72CEB987250D8EA400FCFDAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -94,8 +94,6 @@
 		72E0ECB0229B6E68006BD18F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72E0ECB2229B6E68006BD18F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72E0ECB7229B6E68006BD18F /* Complicated WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Complicated WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		72E0ECBC229B6E68006BD18F /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
-		72E0ECBE229B6E68006BD18F /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		72E0ECC0229B6E68006BD18F /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		72E0ECC2229B6E68006BD18F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72E0ECC4229B6E68006BD18F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -127,7 +125,6 @@
 				72D15772250EB40F004AAF1B /* ComplicationRow.swift */,
 				72D15774250EB6D8004AAF1B /* ComplicationList.swift */,
 				72D15776250EB88C004AAF1B /* ComplicationDetail.swift */,
-				72CEB980250D8EA200FCFDAA /* ContentView.swift */,
 				72CEB982250D8EA400FCFDAA /* Assets.xcassets */,
 				72CEB987250D8EA400FCFDAA /* Info.plist */,
 				72CEB984250D8EA400FCFDAA /* Preview Content */,
@@ -185,8 +182,8 @@
 		72E0ECBB229B6E68006BD18F /* Complicated WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				72E0ECBC229B6E68006BD18F /* InterfaceController.swift */,
-				72E0ECBE229B6E68006BD18F /* ExtensionDelegate.swift */,
+				7266733B257D5B7500E5FD8E /* ComplicatedApp.swift */,
+				72667340257D5BB800E5FD8E /* ContentView.swift */,
 				72E0ECC0229B6E68006BD18F /* ComplicationController.swift */,
 				72E0ECC2229B6E68006BD18F /* Assets.xcassets */,
 				72E0ECC4229B6E68006BD18F /* Info.plist */,
@@ -342,7 +339,6 @@
 			files = (
 				72D15777250EB88C004AAF1B /* ComplicationDetail.swift in Sources */,
 				72CEB98B250D8F3400FCFDAA /* AppColors.swift in Sources */,
-				72CEB981250D8EA200FCFDAA /* ContentView.swift in Sources */,
 				72CEB97F250D8EA200FCFDAA /* ComplicatedApp.swift in Sources */,
 				72CEB98D250D8F3F00FCFDAA /* Complication.swift in Sources */,
 				72D15773250EB40F004AAF1B /* ComplicationRow.swift in Sources */,
@@ -357,10 +353,10 @@
 			files = (
 				72B46A9A24685F3D00DBD1C8 /* Complications.swift in Sources */,
 				72B46A9B24685F4000DBD1C8 /* Complication.swift in Sources */,
-				72E0ECBF229B6E68006BD18F /* ExtensionDelegate.swift in Sources */,
+				72667341257D5BB800E5FD8E /* ContentView.swift in Sources */,
 				72F6AD1C22A1EABA0079C75B /* AppColors.swift in Sources */,
-				72E0ECBD229B6E68006BD18F /* InterfaceController.swift in Sources */,
 				72E0ECC1229B6E68006BD18F /* ComplicationController.swift in Sources */,
+				7266733C257D5B7500E5FD8E /* ComplicatedApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -573,7 +569,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
 			};
 			name = Debug;
 		};
@@ -595,7 +591,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
 			};
 			name = Release;
 		};
@@ -614,7 +610,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
 			};
 			name = Debug;
 		};
@@ -633,7 +629,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
 			};
 			name = Release;
 		};

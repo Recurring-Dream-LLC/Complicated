@@ -1,8 +1,8 @@
 //
 //  ContentView.swift
-//  ComplicatedUI
+//  Complicated WatchKit Extension
 //
-//  Created by Jeff Hokit on 9/12/20.
+//  Created by Jeff Hokit on 12/6/20.
 //  Copyright © 2020 Recurring Dream LLC. All rights reserved.
 //
 
@@ -10,8 +10,15 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            Text("Complicated")
+                .font(.title3)
+            HStack {
+                Image("Cs")
+                Image("Ms")
+                Image("Gci")
+            }
+        }
     }
 }
 
