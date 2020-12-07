@@ -26,9 +26,9 @@ struct ComplicationList: View {
 struct ComplicationList_Previews: PreviewProvider {
     static var previews: some View {
         ComplicationList()
-            .previewDevice(PreviewDevice(rawValue: "iPhone SE"))
+            .previewDevice(PreviewDevice(rawValue: "iPhone 8"))
         ComplicationList()
-            .previewDevice(PreviewDevice(rawValue: "iPhone XS Max"))
+            .previewDevice(PreviewDevice(rawValue: "iPhone 12 Pro Max"))
 
     }
 }
