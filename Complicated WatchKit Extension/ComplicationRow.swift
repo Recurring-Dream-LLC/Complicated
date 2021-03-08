@@ -9,13 +9,28 @@
 import SwiftUI
 
 struct ComplicationRow: View {
+    var complication:Complication
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack{
+            complication.image
+                .resizable()
+                .frame(width: 60, height: 60)
+            Spacer()
+            Text(complication.familyName)
+            Spacer()
+        }
     }
 }
 
 struct ComplicationRow_Previews: PreviewProvider {
     static var previews: some View {
-        ComplicationRow()
+        Group{
+            ComplicationRow(complication: complications[0])
+            ComplicationRow(complication: complications[1])
+        }
+        .previewLayout(.fixed(width: 300, height: 60))
+
     }
 }
+
