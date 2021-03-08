@@ -40,7 +40,6 @@ let CLKComplicationTemplateUtilitarianSmallSquareName = "CLKComplicationTemplate
 let CLKComplicationTemplateUtilitarianSmallSquareDocumentation = URL(string: "https://developer.apple.com/documentation/clockkit/clkcomplicationtemplateutilitariansmallsquare")!
 
 // image provider constants
-
 let CLKImageProviderName = "CLKImageProvider"
 let CLKImageProviderDocumentation = URL(string: "https://developer.apple.com/documentation/clockkit/clkimageprovider")!
 

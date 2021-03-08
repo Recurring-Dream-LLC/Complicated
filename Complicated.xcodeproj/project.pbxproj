@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7206BBF125F6D9E40082679D /* ComplicationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7206BBF025F6D9E40082679D /* ComplicationList.swift */; };
+		7206BBF625F6DB4A0082679D /* ComplicationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7206BBF525F6DB4A0082679D /* ComplicationRow.swift */; };
 		7266733C257D5B7500E5FD8E /* ComplicatedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7266733B257D5B7500E5FD8E /* ComplicatedApp.swift */; };
-		72667341257D5BB800E5FD8E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72667340257D5BB800E5FD8E /* ContentView.swift */; };
 		726708DE2502DEF80050C8E2 /* ComplicationImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 726708DC2502DEF80050C8E2 /* ComplicationImages.xcassets */; };
 		726708DF2502DEF80050C8E2 /* ComplicationImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 726708DC2502DEF80050C8E2 /* ComplicationImages.xcassets */; };
 		72B46A9A24685F3D00DBD1C8 /* Complications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B46A9624685F2300DBD1C8 /* Complications.swift */; };
@@ -76,8 +77,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7206BBF025F6D9E40082679D /* ComplicationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationList.swift; sourceTree = "<group>"; };
+		7206BBF525F6DB4A0082679D /* ComplicationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationRow.swift; sourceTree = "<group>"; };
 		7266733B257D5B7500E5FD8E /* ComplicatedApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicatedApp.swift; sourceTree = "<group>"; };
-		72667340257D5BB800E5FD8E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		726708DC2502DEF80050C8E2 /* ComplicationImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ComplicationImages.xcassets; sourceTree = "<group>"; };
 		72B46A9624685F2300DBD1C8 /* Complications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Complications.swift; sourceTree = "<group>"; };
 		72B46A9824685F3400DBD1C8 /* Complication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Complication.swift; sourceTree = "<group>"; };
@@ -183,7 +185,8 @@
 			isa = PBXGroup;
 			children = (
 				7266733B257D5B7500E5FD8E /* ComplicatedApp.swift */,
-				72667340257D5BB800E5FD8E /* ContentView.swift */,
+				7206BBF025F6D9E40082679D /* ComplicationList.swift */,
+				7206BBF525F6DB4A0082679D /* ComplicationRow.swift */,
 				72E0ECC0229B6E68006BD18F /* ComplicationController.swift */,
 				72E0ECC2229B6E68006BD18F /* Assets.xcassets */,
 				72E0ECC4229B6E68006BD18F /* Info.plist */,
@@ -353,9 +356,10 @@
 			files = (
 				72B46A9A24685F3D00DBD1C8 /* Complications.swift in Sources */,
 				72B46A9B24685F4000DBD1C8 /* Complication.swift in Sources */,
-				72667341257D5BB800E5FD8E /* ContentView.swift in Sources */,
+				7206BBF625F6DB4A0082679D /* ComplicationRow.swift in Sources */,
 				72F6AD1C22A1EABA0079C75B /* AppColors.swift in Sources */,
 				72E0ECC1229B6E68006BD18F /* ComplicationController.swift in Sources */,
+				7206BBF125F6D9E40082679D /* ComplicationList.swift in Sources */,
 				7266733C257D5B7500E5FD8E /* ComplicatedApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
