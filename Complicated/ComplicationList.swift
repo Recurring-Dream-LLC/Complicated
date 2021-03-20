@@ -16,8 +16,11 @@ struct ComplicationList: View {
 
                     ComplicationRow(complication:complication)
                 }
-            }
-            .navigationBarTitle(Text("Complications"))
+            }.navigationBarTitle(Text("Complications"))
+            //.listStyle(PlainListStyle())
+                
+        // This causes the list to take on "Sidebar Style"
+        Text("Select a Complication")
         }
     
     }
@@ -26,6 +29,6 @@ struct ComplicationList: View {
 struct ComplicationList_Previews: PreviewProvider {
     static var previews: some View {
         ComplicationList()
-            .previewDevice(PreviewDevice(rawValue: "iPhone 12 Pro"))
+//            .previewDevice(PreviewDevice(rawValue: "iPhone 12 Pro"))
     }
 }
