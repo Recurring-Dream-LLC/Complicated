@@ -53,7 +53,6 @@ func loadComplications()->[Complication]
 {
     var complications: [Complication] = []
     
-    
     complications.append(Complication(familyName:"Circular Small",
                          complicationFamily:".circularSmall",
                          template: CLKComplicationTemplateCircularSmallSimpleImageName,
@@ -61,7 +60,7 @@ func loadComplications()->[Complication]
                          imageProvider: CLKImageProviderName,
                          imageProviderDocumentation: CLKImageProviderDocumentation,
                          abbreviation:"Cs",
-                         faceNames: ["ONE","TWO"]
+                         faceNames:["Gci-Infograph Modular-Multicolor","Gci-Infograph Modular-Peach","Gci-California-Mango"]))
 
     complications.append(Complication(familyName:"Graphic Corner",
                            complicationFamily:".graphicCorner",
@@ -79,7 +78,7 @@ func loadComplications()->[Complication]
                            imageProvider: CLKFullColorImageProviderName,
                            imageProviderDocumentation:CLKFullColorImageProviderDocumentation,
                            abbreviation:"Gci",
-                           facenames:["Gci-Infograph Modular-Multicolor","Gci-Infograph Modular-Peach","Gci-California-Mango"]))
+                           faceNames:["Gci-Infograph Modular-Multicolor","Gci-Infograph Modular-Peach","Gci-California-Mango"]))
 
     complications.append(Complication(familyName:"Modular Small",
                           complicationFamily:".modularSmall",
@@ -88,7 +87,7 @@ func loadComplications()->[Complication]
                           imageProvider: CLKImageProviderName,
                           imageProviderDocumentation: CLKImageProviderDocumentation,
                           abbreviation:"Ms",
-                          facenames:["Gci-Infograph Modular-Multicolor","Gci-Infograph Modular-Peach","Gci-California-Mango"]))
+                          faceNames:["Gci-Infograph Modular-Multicolor","Gci-Infograph Modular-Peach","Gci-California-Mango"]))
 
     complications.append(Complication(familyName:"Utilitarian Small",
                            complicationFamily:".utilitarianSmall",
@@ -97,6 +96,6 @@ func loadComplications()->[Complication]
                            imageProvider: CLKImageProviderName,
                            imageProviderDocumentation: CLKImageProviderDocumentation,
                            abbreviation:"Us",
-                           facenames:["Gci-Infograph Modular-Multicolor","Gci-Infograph Modular-Peach","Gci-California-Mango"]))
+                           faceNames:["Gci-Infograph Modular-Multicolor","Gci-Infograph Modular-Peach","Gci-California-Mango"]))
     return complications
 }

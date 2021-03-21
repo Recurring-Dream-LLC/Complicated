@@ -94,7 +94,8 @@ struct FaceGallery: View {
                             .frame(width: 324/2, height: 394/2)
                             .padding()
 
-                    Text(name)
+                      // a cheezy way to get the index  let index = complication.faceNames.firstIndex(of: name)
+                        Text(name)
                     }
                 }
             }
