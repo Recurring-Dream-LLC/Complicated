@@ -14,6 +14,8 @@
 		726708DF2502DEF80050C8E2 /* ComplicationImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 726708DC2502DEF80050C8E2 /* ComplicationImages.xcassets */; };
 		72B46A9A24685F3D00DBD1C8 /* Complications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B46A9624685F2300DBD1C8 /* Complications.swift */; };
 		72B46A9B24685F4000DBD1C8 /* Complication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B46A9824685F3400DBD1C8 /* Complication.swift */; };
+		72C9B61526079BD70001F8FE /* WatchFaces.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72C9B61426079BD70001F8FE /* WatchFaces.xcassets */; };
+		72C9B61626079BD70001F8FE /* WatchFaces.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72C9B61426079BD70001F8FE /* WatchFaces.xcassets */; };
 		72CEB97F250D8EA200FCFDAA /* ComplicatedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CEB97E250D8EA200FCFDAA /* ComplicatedApp.swift */; };
 		72CEB983250D8EA400FCFDAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72CEB982250D8EA400FCFDAA /* Assets.xcassets */; };
 		72CEB986250D8EA400FCFDAA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72CEB985250D8EA400FCFDAA /* Preview Assets.xcassets */; };
@@ -83,6 +85,7 @@
 		726708DC2502DEF80050C8E2 /* ComplicationImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ComplicationImages.xcassets; sourceTree = "<group>"; };
 		72B46A9624685F2300DBD1C8 /* Complications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Complications.swift; sourceTree = "<group>"; };
 		72B46A9824685F3400DBD1C8 /* Complication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Complication.swift; sourceTree = "<group>"; };
+		72C9B61426079BD70001F8FE /* WatchFaces.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = WatchFaces.xcassets; sourceTree = "<group>"; };
 		72CEB97C250D8EA200FCFDAA /* Complicated.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Complicated.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72CEB97E250D8EA200FCFDAA /* ComplicatedApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicatedApp.swift; sourceTree = "<group>"; };
 		72CEB982250D8EA400FCFDAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -200,6 +203,7 @@
 				72F6AD1A22A1EA690079C75B /* AppColors.swift */,
 				72B46A9624685F2300DBD1C8 /* Complications.swift */,
 				72B46A9824685F3400DBD1C8 /* Complication.swift */,
+				72C9B61426079BD70001F8FE /* WatchFaces.xcassets */,
 				726708DC2502DEF80050C8E2 /* ComplicationImages.xcassets */,
 			);
 			path = Shared;
@@ -307,6 +311,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72C9B61526079BD70001F8FE /* WatchFaces.xcassets in Resources */,
 				72CEB986250D8EA400FCFDAA /* Preview Assets.xcassets in Resources */,
 				72CEB98E250D8F4100FCFDAA /* ComplicationImages.xcassets in Resources */,
 				72CEB983250D8EA400FCFDAA /* Assets.xcassets in Resources */,
@@ -330,6 +335,7 @@
 			files = (
 				72E0ECC3229B6E68006BD18F /* Assets.xcassets in Resources */,
 				726708DF2502DEF80050C8E2 /* ComplicationImages.xcassets in Resources */,
+				72C9B61626079BD70001F8FE /* WatchFaces.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

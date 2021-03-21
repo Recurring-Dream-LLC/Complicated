@@ -21,7 +21,7 @@ import SwiftUI
 //╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍
 //
 //╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍
-struct Complication: Hashable, Codable, Identifiable
+struct Complication: Identifiable
 {
     var id:String = ""
     var familyName:String = ""
@@ -31,8 +31,11 @@ struct Complication: Hashable, Codable, Identifiable
     var imageProvider:String = ""
     var imageProviderDocumentation: URL
     fileprivate var abbreviation:String = ""
-    
-    
+    var faces: [Image] = []
+    var image: Image {
+        Image(abbreviation)
+    }
+
     init(familyName: String,
          complicationFamily: String,
          template:String,
@@ -48,13 +51,11 @@ struct Complication: Hashable, Codable, Identifiable
         self.imageProvider = imageProvider
         self.imageProviderDocumentation = imageProviderDocumentation
         self.abbreviation = abbreviation
+        
+        self.faces.append(Image("Cs"+"1"))
+        self.faces.append(Image("Cs"+"2"))
     }
 
 }
 
 
-extension Complication {
-    var image: Image {
-        Image(abbreviation)
-    }
-}

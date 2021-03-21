@@ -17,9 +17,9 @@ struct ComplicationList: View {
                     ComplicationRow(complication:complication)
                 }
             }.navigationBarTitle(Text("Complications"))
-            //.listStyle(PlainListStyle())
+            .listStyle(PlainListStyle())
                 
-        // This causes the list to take on "Sidebar Style"
+        // This causes the list to take on "Sidebar Style" unless overidden by .listStyle above
         Text("Select a Complication")
         }
     

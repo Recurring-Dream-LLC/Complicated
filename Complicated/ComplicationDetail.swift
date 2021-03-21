@@ -100,6 +100,35 @@ struct ComplicationDetail: View {
             
             DetailRow(title: "Tintable", detail: "Yes") // Are all complications tintable now in watchOS 7?
             
+            HStack{
+                Text("Examples")
+                    .font(.title2)
+                    .fontWeight(.bold)
+                Spacer()
+            }.padding()
+
+            ScrollView(.horizontal) {
+
+            HStack{
+                complication.faces[0]
+                .resizable()
+                .frame(width: 324/2, height: 394/2)
+                .padding()
+                
+                complication.faces[1]
+                .resizable()
+                    .frame(width: 324/2, height: 394/2)
+                .padding()
+
+                complication.faces[1]
+                .resizable()
+                    .frame(width: 324/2, height: 394/2)
+                .padding()
+
+                Spacer()
+            }.padding()
+            }
+            
             Spacer() // Top align the VStack
         }.navigationBarTitleDisplayMode(.inline)
     }
@@ -110,10 +139,7 @@ struct ComplicationDetail_Previews: PreviewProvider {
         Group {
             ComplicationDetail(complication: complications[0])
                 .preferredColorScheme(.dark)
-                .previewDevice(PreviewDevice(rawValue: "iPhone 12 mini"))
-            ComplicationDetail(complication: complications[0])
-                .preferredColorScheme(.dark)
-                .previewDevice(PreviewDevice(rawValue: "iPad Air (4th generation)"))
+//                .previewDevice(PreviewDevice(rawValue: "iPhone 12 mini"))
         }
     }
 }
