@@ -40,7 +40,6 @@ struct DetailRow: View{
 }
 
 
-
 struct DetailRowTwolineLinked: View{
     var title:String
     var linkTitle:String
@@ -66,25 +65,66 @@ struct DetailRowTwolineLinked: View{
     }
 }
 
+
+struct SectionHeader: View{
+    var title:String
+
+    var body: some View {
+        HStack{
+            Text(title)
+                .font(.title2)
+                .fontWeight(.bold)
+            Spacer()
+        }.padding()
+    }
+}
+
+
+struct FaceGallery: View{
+    var complication:Complication
+    var body: some View {
+        ScrollView(.horizontal) {
+            
+            HStack{
+                complication.faces[0]
+                    .resizable()
+                    .frame(width: 324/2, height: 394/2)
+                    .padding()
+                
+                complication.faces[1]
+                    .resizable()
+                    .frame(width: 324/2, height: 394/2)
+                    .padding()
+                
+                complication.faces[1]
+                    .resizable()
+                    .frame(width: 324/2, height: 394/2)
+                    .padding()
+                
+                Spacer()
+            }
+        }
+
+    }
+
+}
+
 struct ComplicationDetail: View {
     @Environment(\.horizontalSizeClass) var horizontalSizeClass : UserInterfaceSizeClass?
 
     var complication:Complication
     
     var body: some View {
+        ScrollView(.vertical)
+        {
         VStack(spacing: -5){
             complication.image
                 .resizable()
                 .frame(width: 80, height: 80)
                 .padding()
             
-            HStack{
-                Text("Information")
-                    .font(.title2)
-                    .fontWeight(.bold)
-                Spacer()
-            }.padding()
-            
+            SectionHeader(title: "Information")
+
             DetailRow(title: "Family Name", detail: complication.familyName)
             
             DetailRow(title: "ImageProvider",detail: complication.imageProvider,link: complication.imageProviderDocumentation)
@@ -100,37 +140,15 @@ struct ComplicationDetail: View {
             
             DetailRow(title: "Tintable", detail: "Yes") // Are all complications tintable now in watchOS 7?
             
-            HStack{
-                Text("Examples")
-                    .font(.title2)
-                    .fontWeight(.bold)
-                Spacer()
-            }.padding()
+            Spacer()
 
-            ScrollView(.horizontal) {
-
-            HStack{
-                complication.faces[0]
-                .resizable()
-                .frame(width: 324/2, height: 394/2)
-                .padding()
-                
-                complication.faces[1]
-                .resizable()
-                    .frame(width: 324/2, height: 394/2)
-                .padding()
-
-                complication.faces[1]
-                .resizable()
-                    .frame(width: 324/2, height: 394/2)
-                .padding()
-
-                Spacer()
-            }.padding()
-            }
+            SectionHeader(title: "Examples")
+            
+            FaceGallery(complication:complication)
             
             Spacer() // Top align the VStack
         }.navigationBarTitleDisplayMode(.inline)
+    }
     }
 }
 
