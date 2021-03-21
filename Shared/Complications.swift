@@ -60,7 +60,9 @@ func loadComplications()->[Complication]
                          imageProvider: CLKImageProviderName,
                          imageProviderDocumentation: CLKImageProviderDocumentation,
                          abbreviation:"Cs",
-                         faceNames:["Gci-Infograph Modular-Multicolor","Gci-Infograph Modular-Peach","Gci-California-Mango"]))
+                         faceNames:[
+                            WatchFace(imageName: "Cs1", displayName:"Unknown"),
+                            WatchFace(imageName:"Cs2",displayName: "Unknown")]))
 
     complications.append(Complication(familyName:"Graphic Corner",
                            complicationFamily:".graphicCorner",
@@ -69,7 +71,10 @@ func loadComplications()->[Complication]
                            imageProvider: CLKFullColorImageProviderName,
                            imageProviderDocumentation: CLKFullColorImageProviderDocumentation,
                            abbreviation:"Gco",
-                           faceNames:["Gci-Infograph Modular-Multicolor","Gci-Infograph Modular-Peach","Gci-California-Mango"]))
+                           faceNames:[
+                              WatchFace(imageName: "Gci-Infograph Modular-Multicolor", displayName:"Infograph Modular (Multicolor)"),
+                              WatchFace(imageName:"Gci-Infograph Modular-Peach",displayName: "Infograph Modular (Peach)"),
+                              WatchFace(imageName: "Gci-California-Mango", displayName:"California (Mango)")]))
 
     complications.append(Complication(familyName:"Graphic Circular",
                            complicationFamily:".graphicCircular",
@@ -78,7 +83,10 @@ func loadComplications()->[Complication]
                            imageProvider: CLKFullColorImageProviderName,
                            imageProviderDocumentation:CLKFullColorImageProviderDocumentation,
                            abbreviation:"Gci",
-                           faceNames:["Gci-Infograph Modular-Multicolor","Gci-Infograph Modular-Peach","Gci-California-Mango"]))
+                           faceNames:[
+                              WatchFace(imageName: "Gci-Infograph Modular-Multicolor", displayName:"Infograph Modular (Multicolor)"),
+                              WatchFace(imageName:"Gci-Infograph Modular-Peach",displayName: "Infograph Modular (Peach)"),
+                              WatchFace(imageName: "Gci-California-Mango", displayName:"California (Mango)")]))
 
     complications.append(Complication(familyName:"Modular Small",
                           complicationFamily:".modularSmall",
@@ -87,7 +95,10 @@ func loadComplications()->[Complication]
                           imageProvider: CLKImageProviderName,
                           imageProviderDocumentation: CLKImageProviderDocumentation,
                           abbreviation:"Ms",
-                          faceNames:["Gci-Infograph Modular-Multicolor","Gci-Infograph Modular-Peach","Gci-California-Mango"]))
+                          faceNames:[
+                             WatchFace(imageName: "Gci-Infograph Modular-Multicolor", displayName:"Infograph Modular (Multicolor)"),
+                             WatchFace(imageName:"Gci-Infograph Modular-Peach",displayName: "Infograph Modular (Peach)"),
+                             WatchFace(imageName: "Gci-California-Mango", displayName:"California (Mango)")]))
 
     complications.append(Complication(familyName:"Utilitarian Small",
                            complicationFamily:".utilitarianSmall",
@@ -96,6 +107,9 @@ func loadComplications()->[Complication]
                            imageProvider: CLKImageProviderName,
                            imageProviderDocumentation: CLKImageProviderDocumentation,
                            abbreviation:"Us",
-                           faceNames:["Gci-Infograph Modular-Multicolor","Gci-Infograph Modular-Peach","Gci-California-Mango"]))
+                           faceNames:[
+                              WatchFace(imageName: "Gci-Infograph Modular-Multicolor", displayName:"Infograph Modular (Multicolor)"),
+                              WatchFace(imageName:"Gci-Infograph Modular-Peach",displayName: "Infograph Modular (Peach)"),
+                              WatchFace(imageName: "Gci-California-Mango", displayName:"California (Mango)")]))
     return complications
 }

@@ -86,17 +86,16 @@ struct FaceGallery: View {
     var body: some View {
         ScrollView(.horizontal) {
             HStack{
-                ForEach(complication.faceNames, id: \.self) { name in
+                ForEach(complication.faceNames, id: \.self) { watchFace in
                     VStack
                     {
-                        Image(name)
+                        Image(watchFace.imageName)
                             .resizable()
                             .frame(width: 324/2, height: 394/2)
-                            .padding()
 
-                      // a cheezy way to get the index  let index = complication.faceNames.firstIndex(of: name)
-                        Text(name)
-                    }
+                        Text(watchFace.displayName)
+                            .font(.caption)
+                    }.padding()
                 }
             }
         }
@@ -104,27 +103,6 @@ struct FaceGallery: View {
 }
 
 
-
-//struct FaceGallery: View {
-//    var complication:Complication
-//    var body: some View {
-//        ScrollView(.horizontal) {
-//
-//            HStack{
-//                ForEach(complication.faces, id:\.self ) { aFace in
-//                    aFace.resizable()
-//                        .frame(width: 324/2, height: 394/2)
-//                        .padding()
-////
-//                }
-//
-//                Spacer()
-//            }
-//        }
-//
-//    }
-//
-//}
 
 struct ComplicationDetail: View {
     @Environment(\.horizontalSizeClass) var horizontalSizeClass : UserInterfaceSizeClass?
