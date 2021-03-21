@@ -31,6 +31,7 @@
 		72E0ECB8229B6E68006BD18F /* Complicated WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 72E0ECB7229B6E68006BD18F /* Complicated WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		72E0ECC1229B6E68006BD18F /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E0ECC0229B6E68006BD18F /* ComplicationController.swift */; };
 		72E0ECC3229B6E68006BD18F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72E0ECC2229B6E68006BD18F /* Assets.xcassets */; };
+		72F1E1012607C233007448A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72F1E1002607C233007448A4 /* Assets.xcassets */; };
 		72F6AD1C22A1EABA0079C75B /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F6AD1A22A1EA690079C75B /* AppColors.swift */; };
 		72F6AD1D22A343270079C75B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72E0ECC2229B6E68006BD18F /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -100,6 +101,7 @@
 		72E0ECC0229B6E68006BD18F /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		72E0ECC2229B6E68006BD18F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72E0ECC4229B6E68006BD18F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72F1E1002607C233007448A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72F6AD1A22A1EA690079C75B /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -176,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				72E0ECAD229B6E67006BD18F /* Interface.storyboard */,
+				72F1E1002607C233007448A4 /* Assets.xcassets */,
 				72E0ECB2229B6E68006BD18F /* Info.plist */,
 			);
 			path = "Complicated WatchKit App";
@@ -321,6 +324,7 @@
 			files = (
 				72F6AD1D22A343270079C75B /* Assets.xcassets in Resources */,
 				72E0ECAF229B6E67006BD18F /* Interface.storyboard in Resources */,
+				72F1E1012607C233007448A4 /* Assets.xcassets in Resources */,
 				726708DE2502DEF80050C8E2 /* ComplicationImages.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
