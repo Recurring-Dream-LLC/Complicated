@@ -80,34 +80,50 @@ struct SectionHeader: View{
 }
 
 
-struct FaceGallery: View{
+
+struct FaceGallery: View {
     var complication:Complication
     var body: some View {
         ScrollView(.horizontal) {
-            
             HStack{
-                complication.faces[0]
-                    .resizable()
-                    .frame(width: 324/2, height: 394/2)
-                    .padding()
-                
-                complication.faces[1]
-                    .resizable()
-                    .frame(width: 324/2, height: 394/2)
-                    .padding()
-                
-                complication.faces[1]
-                    .resizable()
-                    .frame(width: 324/2, height: 394/2)
-                    .padding()
-                
-                Spacer()
+                ForEach(complication.faceNames, id: \.self) { name in
+                    VStack
+                    {
+                        Image(name)
+                            .resizable()
+                            .frame(width: 324/2, height: 394/2)
+                            .padding()
+
+                    Text(name)
+                    }
+                }
             }
         }
-
     }
-
 }
+
+
+
+//struct FaceGallery: View {
+//    var complication:Complication
+//    var body: some View {
+//        ScrollView(.horizontal) {
+//
+//            HStack{
+//                ForEach(complication.faces, id:\.self ) { aFace in
+//                    aFace.resizable()
+//                        .frame(width: 324/2, height: 394/2)
+//                        .padding()
+////
+//                }
+//
+//                Spacer()
+//            }
+//        }
+//
+//    }
+//
+//}
 
 struct ComplicationDetail: View {
     @Environment(\.horizontalSizeClass) var horizontalSizeClass : UserInterfaceSizeClass?

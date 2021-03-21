@@ -31,7 +31,7 @@ struct Complication: Identifiable
     var imageProvider:String = ""
     var imageProviderDocumentation: URL
     fileprivate var abbreviation:String = ""
-    var faces: [Image] = []
+    var faceNames: [String]
     var image: Image {
         Image(abbreviation)
     }
@@ -42,7 +42,8 @@ struct Complication: Identifiable
          templateDocumentation:URL,
          imageProvider: String,
          imageProviderDocumentation:URL,
-         abbreviation: String) {
+         abbreviation: String,
+         faceNames: [String]) {
         self.id = abbreviation
         self.familyName = familyName
         self.complicationFamily = complicationFamily
@@ -51,9 +52,7 @@ struct Complication: Identifiable
         self.imageProvider = imageProvider
         self.imageProviderDocumentation = imageProviderDocumentation
         self.abbreviation = abbreviation
-        
-        self.faces.append(Image("Cs"+"1"))
-        self.faces.append(Image("Cs"+"2"))
+        self.faceNames = faceNames
     }
 
 }
