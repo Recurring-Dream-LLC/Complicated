@@ -15,33 +15,40 @@ import WatchKit
 
 let complications:[Complication] = loadComplications()
 
-// family constants
-let circularSmallDocumentation = URL(string: "https://developer.apple.com/documentation/clockkit/circular_small")!
-let graphicCornerDocumentation = URL(string: "https://developer.apple.com/documentation/clockkit/graphic")!
-let graphicCircularDocumentation = URL(string: "https://developer.apple.com/documentation/clockkit/graphic")!
-let modularSmallDocumentation = URL(string: "https://developer.apple.com/documentation/clockkit/modular_small")!
-let utilitarianSmallDocumentation = URL(string: "https://developer.apple.com/documentation/clockkit/modular_small")!
+// the commonly used prefix to apple dev documentation URLs
+fileprivate let docsPath = "https://developer.apple.com/documentation/clockkit/"
 
+// family constants
+fileprivate enum CKFamily{
+    static let CircularSmallDocumentation = URL(string: docsPath + "circular_small")!
+    static let GraphicCornerDocumentation = URL(string: docsPath + "graphic")!
+    static let GraphicCircularDocumentation = URL(string: docsPath + "graphic")!
+    static let ModularSmallDocumentation = URL(string: docsPath + "modular_small")!
+    static let UtilitarianSmallDocumentation = URL(string: docsPath + "modular_small")!
+}
 
 // template constants
-let CLKComplicationTemplateCircularSmallSimpleImageName = "CLKComplicationTemplateCircularSmallSimpleImage"
-let CLKComplicationTemplateCircularSmallSimpleImageDocumentation = URL(string: "https://developer.apple.com/documentation/clockkit/clkcomplicationtemplatecircularsmallsimpleimage")!
-
-let CLKComplicationTemplateGraphicCornerCircularImageName = "CLKComplicationTemplateGraphicCornerCircularImage"
-let CLKComplicationTemplateGraphicCornerCircularImageDocumentation = URL(string: "https://developer.apple.com/documentation/clockkit/clkcomplicationtemplategraphiccornercircularimage")!
-
-let CLKComplicationTemplateGraphicCircularImageName = "CLKComplicationTemplateGraphicCircularImage"
-let CLKComplicationTemplateGraphicCircularImageDocumentation = URL(string: "https://developer.apple.com/documentation/clockkit/clkcomplicationtemplategraphiccircularimage")!
-
-let CLKComplicationTemplateUtilitarianSmallSquareName = "CLKComplicationTemplateUtilitarianSmallSquare"
-let CLKComplicationTemplateUtilitarianSmallSquareDocumentation = URL(string: "https://developer.apple.com/documentation/clockkit/clkcomplicationtemplateutilitariansmallsquare")!
+fileprivate enum CKTemplate
+{
+    static let CircularSmallSimpleImageName = "CLKComplicationTemplateCircularSmallSimpleImage"
+    static let CircularSmallSimpleImageDocumentation = URL(string: docsPath + "clkcomplicationtemplatecircularsmallsimpleimage")!
+    
+    static let GraphicCornerCircularImageName = "CLKComplicationTemplateGraphicCornerCircularImage"
+    static let GraphicCornerCircularImageDocumentation = URL(string: docsPath + "clkcomplicationtemplategraphiccornercircularimage")!
+    
+    static let GraphicCircularImageName = "CLKComplicationTemplateGraphicCircularImage"
+    static let GraphicCircularImageDocumentation = URL(string: docsPath + "clkcomplicationtemplategraphiccircularimage")!
+    
+    static let UtilitarianSmallSquareName = "CLKComplicationTemplateUtilitarianSmallSquare"
+    static let UtilitarianSmallSquareDocumentation = URL(string: docsPath +  "clkcomplicationtemplateutilitariansmallsquare")!
+}
 
 // image provider constants
-let CLKImageProviderName = "CLKImageProvider"
-let CLKImageProviderDocumentation = URL(string: "https://developer.apple.com/documentation/clockkit/clkimageprovider")!
+fileprivate let CLKImageProviderName = "CLKImageProvider"
+fileprivate let CLKImageProviderDocumentation = URL(string: docsPath + "clkimageprovider")!
 
-let CLKFullColorImageProviderName = "CLKFullColorImageProvider"
-let CLKFullColorImageProviderDocumentation = URL(string: "https://developer.apple.com/documentation/clockkit/clkfullcolorimageprovider")!
+fileprivate let CLKFullColorImageProviderName = "CLKFullColorImageProvider"
+fileprivate let CLKFullColorImageProviderDocumentation = URL(string: docsPath + "clkfullcolorimageprovider")!
 
 //——————————————————————————————————————————————————————————————————————————————
 //
@@ -52,8 +59,8 @@ func loadComplications()->[Complication]
     
     complications.append(Complication(familyName:"Circular Small",
                          complicationFamily:".circularSmall",
-                         template: CLKComplicationTemplateCircularSmallSimpleImageName,
-                         templateDocumentation: CLKComplicationTemplateCircularSmallSimpleImageDocumentation,
+                         template: CKTemplate.CircularSmallSimpleImageName,
+                         templateDocumentation:CKTemplate.CircularSmallSimpleImageDocumentation,
                          imageProvider: CLKImageProviderName,
                          imageProviderDocumentation: CLKImageProviderDocumentation,
                          abbreviation:"Cs",
@@ -63,8 +70,8 @@ func loadComplications()->[Complication]
 
     complications.append(Complication(familyName:"Graphic Corner",
                            complicationFamily:".graphicCorner",
-                           template: CLKComplicationTemplateGraphicCornerCircularImageName,
-                           templateDocumentation: CLKComplicationTemplateGraphicCornerCircularImageDocumentation,
+                           template: CKTemplate.GraphicCornerCircularImageName,
+                           templateDocumentation: CKTemplate.GraphicCornerCircularImageDocumentation,
                            imageProvider: CLKFullColorImageProviderName,
                            imageProviderDocumentation: CLKFullColorImageProviderDocumentation,
                            abbreviation:"Gco",
@@ -75,8 +82,8 @@ func loadComplications()->[Complication]
 
     complications.append(Complication(familyName:"Graphic Circular",
                            complicationFamily:".graphicCircular",
-                           template: CLKComplicationTemplateGraphicCircularImageName,
-                           templateDocumentation: CLKComplicationTemplateGraphicCircularImageDocumentation,
+                           template: CKTemplate.GraphicCircularImageName,
+                           templateDocumentation: CKTemplate.GraphicCircularImageDocumentation,
                            imageProvider: CLKFullColorImageProviderName,
                            imageProviderDocumentation:CLKFullColorImageProviderDocumentation,
                            abbreviation:"Gci",
@@ -87,8 +94,8 @@ func loadComplications()->[Complication]
 
     complications.append(Complication(familyName:"Modular Small",
                           complicationFamily:".modularSmall",
-                          template: CLKComplicationTemplateCircularSmallSimpleImageName,
-                          templateDocumentation: CLKComplicationTemplateCircularSmallSimpleImageDocumentation,
+                          template: CKTemplate.CircularSmallSimpleImageName,
+                          templateDocumentation: CKTemplate.CircularSmallSimpleImageDocumentation,
                           imageProvider: CLKImageProviderName,
                           imageProviderDocumentation: CLKImageProviderDocumentation,
                           abbreviation:"Ms",
@@ -99,8 +106,8 @@ func loadComplications()->[Complication]
 
     complications.append(Complication(familyName:"Utilitarian Small",
                            complicationFamily:".utilitarianSmall",
-                           template: CLKComplicationTemplateUtilitarianSmallSquareName,
-                           templateDocumentation: CLKComplicationTemplateUtilitarianSmallSquareDocumentation,
+                           template: CKTemplate.UtilitarianSmallSquareName,
+                           templateDocumentation: CKTemplate.UtilitarianSmallSquareDocumentation,
                            imageProvider: CLKImageProviderName,
                            imageProviderDocumentation: CLKImageProviderDocumentation,
                            abbreviation:"Us",
