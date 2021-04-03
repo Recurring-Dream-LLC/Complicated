@@ -39,6 +39,9 @@ fileprivate enum CKTemplate
     static let GraphicCircularImageName = "CLKComplicationTemplateGraphicCircularImage"
     static let GraphicCircularImageDocumentation = URL(string: docsPath + "clkcomplicationtemplategraphiccircularimage")!
     
+    static let ModularSmallImageName = "CLKComplicationTemplateModularSmallSimpleImage"
+    static let ModularSmallImageDocumentation = URL(string: docsPath + "clkcomplicationtemplatemodularsmallsimpleimage")!
+
     static let UtilitarianSmallSquareName = "CLKComplicationTemplateUtilitarianSmallSquare"
     static let UtilitarianSmallSquareDocumentation = URL(string: docsPath +  "clkcomplicationtemplateutilitariansmallsquare")!
 }
@@ -64,9 +67,10 @@ func loadComplications()->[Complication]
                          imageProvider: CLKImageProviderName,
                          imageProviderDocumentation: CLKImageProviderDocumentation,
                          abbreviation:"Cs",
+                         notes:"May be tinted or monochrome. Artwork should not include the circular backgroud, it's added by watchOS",
                          faceNames:[
-                            WatchFace(imageName: "Cs1", displayName:"Unknown"),
-                            WatchFace(imageName:"Cs2",displayName: "Unknown")]))
+                            WatchFace(imageName: "Cs-Activity Analog-Red", displayName:"Activity Analog (Red)"),
+                            WatchFace(imageName:"Cs-Color-Spearmint",displayName: "Color (Spearmint)")]))
 
     complications.append(Complication(familyName:"Graphic Corner",
                            complicationFamily:".graphicCorner",
@@ -75,10 +79,11 @@ func loadComplications()->[Complication]
                            imageProvider: CLKFullColorImageProviderName,
                            imageProviderDocumentation: CLKFullColorImageProviderDocumentation,
                            abbreviation:"Gco",
+                           notes:"May be tinted, monochrome, or true color. Artwork should not include the circular backgroud, it's added by watchOS",
                            faceNames:[
-                              WatchFace(imageName: "Gci-Infograph Modular-Multicolor", displayName:"Infograph Modular (Multicolor)"),
-                              WatchFace(imageName:"Gci-Infograph Modular-Peach",displayName: "Infograph Modular (Peach)"),
-                              WatchFace(imageName: "Gci-California-Mango", displayName:"California (Mango)")]))
+                            WatchFace(imageName: "Gco-Solar Dial", displayName:"Solar Dial"),
+                              WatchFace(imageName: "Gco-Infograph-Black", displayName:"Infograph (Black)"),
+                              WatchFace(imageName:"Gco-Infograph-Peach",displayName: "Infograph (Peach)")]))
 
     complications.append(Complication(familyName:"Graphic Circular",
                            complicationFamily:".graphicCircular",
@@ -87,6 +92,7 @@ func loadComplications()->[Complication]
                            imageProvider: CLKFullColorImageProviderName,
                            imageProviderDocumentation:CLKFullColorImageProviderDocumentation,
                            abbreviation:"Gci",
+                           notes:"",
                            faceNames:[
                               WatchFace(imageName: "Gci-Infograph Modular-Multicolor", displayName:"Infograph Modular (Multicolor)"),
                               WatchFace(imageName:"Gci-Infograph Modular-Peach",displayName: "Infograph Modular (Peach)"),
@@ -94,15 +100,15 @@ func loadComplications()->[Complication]
 
     complications.append(Complication(familyName:"Modular Small",
                           complicationFamily:".modularSmall",
-                          template: CKTemplate.CircularSmallSimpleImageName,
-                          templateDocumentation: CKTemplate.CircularSmallSimpleImageDocumentation,
+                          template: CKTemplate.ModularSmallImageName,
+                          templateDocumentation: CKTemplate.ModularSmallImageDocumentation,
                           imageProvider: CLKImageProviderName,
                           imageProviderDocumentation: CLKImageProviderDocumentation,
                           abbreviation:"Ms",
+                          notes:"",
                           faceNames:[
-                             WatchFace(imageName: "Gci-Infograph Modular-Multicolor", displayName:"Infograph Modular (Multicolor)"),
-                             WatchFace(imageName:"Gci-Infograph Modular-Peach",displayName: "Infograph Modular (Peach)"),
-                             WatchFace(imageName: "Gci-California-Mango", displayName:"California (Mango)")]))
+                             WatchFace(imageName: "Ms-Modular-Multicolor", displayName:"Modular (Multicolor)"),
+                             WatchFace(imageName: "Ms-Modular-Pink", displayName:"Modular (Pink)")]))
 
     complications.append(Complication(familyName:"Utilitarian Small",
                            complicationFamily:".utilitarianSmall",
@@ -111,9 +117,9 @@ func loadComplications()->[Complication]
                            imageProvider: CLKImageProviderName,
                            imageProviderDocumentation: CLKImageProviderDocumentation,
                            abbreviation:"Us",
+                           notes:"",
                            faceNames:[
-                              WatchFace(imageName: "Gci-Infograph Modular-Multicolor", displayName:"Infograph Modular (Multicolor)"),
-                              WatchFace(imageName:"Gci-Infograph Modular-Peach",displayName: "Infograph Modular (Peach)"),
-                              WatchFace(imageName: "Gci-California-Mango", displayName:"California (Mango)")]))
+                              WatchFace(imageName: "Us-Simple-Red", displayName:"Simple (Red)"),
+                              WatchFace(imageName:"Us-Numerals-Apricot",displayName: "Numerals (Apricot)")]))
     return complications
 }
