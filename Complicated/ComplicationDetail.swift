@@ -40,10 +40,9 @@ struct DetailRow: View{
 }
 
 
-struct DetailRowTwolineLinked: View{
+struct DetailRowMultiline:View {
     var title:String
-    var linkTitle:String
-    var link:URL
+    var detail:String
     
     var body: some View {
         VStack(alignment: .center){
@@ -55,10 +54,48 @@ struct DetailRowTwolineLinked: View{
             }
             HStack {
                 Spacer()
-                Link(linkTitle, destination: link)
+                
+                Text(detail)
                     .font(.body)
+                    .foregroundColor(Color(.label))
                     .minimumScaleFactor(0.5)
-                    .lineLimit(1)
+                    .lineLimit(4)
+            }
+        }.padding()
+        Divider()
+    }
+}
+
+struct DetailRowTwoline: View{
+    var title:String
+    var detail:String
+    var link:URL?
+    
+    var body: some View {
+        VStack(alignment: .center){
+            HStack {
+                Text(title)
+                    .font(.body)
+                    .foregroundColor(Color(.secondaryLabel))
+                Spacer()
+            }
+            HStack {
+                Spacer()
+                if let link = link
+                {
+                    Link(detail, destination: link)
+                        .font(.body)
+                        .minimumScaleFactor(0.5)
+                        .lineLimit(1)
+                }
+                else
+                {
+                    Text(detail)
+                        .font(.body)
+                        .foregroundColor(Color(.label))
+                        .minimumScaleFactor(0.5)
+                        .lineLimit(1)
+                }
             }
         }.padding()
        Divider()
@@ -126,16 +163,22 @@ struct ComplicationDetail: View {
             
             if horizontalSizeClass == .compact
             {
-                DetailRowTwolineLinked(title: "Template", linkTitle: complication.template, link: complication.templateDocumentation)
+                DetailRowTwoline(title: "Template", detail: complication.template, link: complication.templateDocumentation)
             }
             else
             {
                 DetailRow(title: "Template", detail: complication.template, link: complication.templateDocumentation)
             }
             
-            DetailRow(title: "Tintable", detail: "Yes") // Are all complications tintable now in watchOS 7?
+            if (complication.notes != "")
+            {
+                DetailRowMultiline(title: "Notes", detail: complication.notes)
+
+            }
             
-            Spacer()
+           // DetailRow(title: "Tintable", detail: "Yes") // Are all complications tintable now in watchOS 7?
+            
+          //  Spacer()
 
             SectionHeader(title: "Examples")
             
