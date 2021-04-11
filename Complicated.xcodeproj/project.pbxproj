@@ -29,7 +29,6 @@
 		72D15775250EB6D8004AAF1B /* ComplicationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D15774250EB6D8004AAF1B /* ComplicationList.swift */; };
 		72D15777250EB88C004AAF1B /* ComplicationDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D15776250EB88C004AAF1B /* ComplicationDetail.swift */; };
 		72D15779250EC86C004AAF1B /* Complicated WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 72E0ECA8229B6E67006BD18F /* Complicated WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		72E0ECAF229B6E67006BD18F /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72E0ECAD229B6E67006BD18F /* Interface.storyboard */; };
 		72E0ECB8229B6E68006BD18F /* Complicated WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 72E0ECB7229B6E68006BD18F /* Complicated WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		72E0ECC1229B6E68006BD18F /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E0ECC0229B6E68006BD18F /* ComplicationController.swift */; };
 		72E0ECC3229B6E68006BD18F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72E0ECC2229B6E68006BD18F /* Assets.xcassets */; };
@@ -98,7 +97,6 @@
 		72D15774250EB6D8004AAF1B /* ComplicationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationList.swift; sourceTree = "<group>"; };
 		72D15776250EB88C004AAF1B /* ComplicationDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationDetail.swift; sourceTree = "<group>"; };
 		72E0ECA8229B6E67006BD18F /* Complicated WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Complicated WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		72E0ECAE229B6E67006BD18F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		72E0ECB2229B6E68006BD18F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72E0ECB7229B6E68006BD18F /* Complicated WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Complicated WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72E0ECC0229B6E68006BD18F /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
@@ -180,7 +178,6 @@
 		72E0ECAC229B6E67006BD18F /* Complicated WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
-				72E0ECAD229B6E67006BD18F /* Interface.storyboard */,
 				72F1E1002607C233007448A4 /* Assets.xcassets */,
 				72E0ECB2229B6E68006BD18F /* Info.plist */,
 			);
@@ -327,7 +324,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				72F6AD1D22A343270079C75B /* Assets.xcassets in Resources */,
-				72E0ECAF229B6E67006BD18F /* Interface.storyboard in Resources */,
 				72F1E1012607C233007448A4 /* Assets.xcassets in Resources */,
 				726708DE2502DEF80050C8E2 /* ComplicationImages.xcassets in Resources */,
 			);
@@ -390,17 +386,6 @@
 			targetProxy = 72E0ECB9229B6E68006BD18F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		72E0ECAD229B6E67006BD18F /* Interface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				72E0ECAE229B6E67006BD18F /* Base */,
-			);
-			name = Interface.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		72CEB988250D8EA400FCFDAA /* Debug */ = {
