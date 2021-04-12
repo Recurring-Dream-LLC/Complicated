@@ -67,7 +67,7 @@ func loadComplications()->[Complication]
                          imageProvider: CLKImageProviderName,
                          imageProviderDocumentation: CLKImageProviderDocumentation,
                          abbreviation:"Cs",
-                         notes:"May be tinted or monochrome. Artwork should not include the circular backgroud, it's added by watchOS",
+                         notes:"Artwork should not include the circular backgroud, it's added by watchOS",
                          faceNames:[
                             WatchFace(imageName: "Cs-Activity Analog-Red", displayName:"Activity Analog (Red)"),
                             WatchFace(imageName:"Cs-Color-Spearmint",displayName: "Color (Spearmint)")]))
@@ -79,7 +79,7 @@ func loadComplications()->[Complication]
                            imageProvider: CLKFullColorImageProviderName,
                            imageProviderDocumentation: CLKFullColorImageProviderDocumentation,
                            abbreviation:"Gco",
-                           notes:"May be tinted, monochrome, or true color. Artwork should not include the circular backgroud, it's added by watchOS",
+                           notes:"",
                            faceNames:[
                             WatchFace(imageName: "Gco-Solar Dial", displayName:"Solar Dial"),
                               WatchFace(imageName: "Gco-Infograph-Black", displayName:"Infograph (Black)"),
@@ -92,7 +92,7 @@ func loadComplications()->[Complication]
                            imageProvider: CLKFullColorImageProviderName,
                            imageProviderDocumentation:CLKFullColorImageProviderDocumentation,
                            abbreviation:"Gci",
-                           notes:"",
+                           notes:"Atwork should include a circular backround if desired, it's not added by watchOS",
                            faceNames:[
                               WatchFace(imageName: "Gci-Infograph Modular-Multicolor", displayName:"Infograph Modular (Multicolor)"),
                               WatchFace(imageName:"Gci-Infograph Modular-Peach",displayName: "Infograph Modular (Peach)"),
