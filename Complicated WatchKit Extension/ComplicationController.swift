@@ -86,7 +86,16 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         }
         else if complication.family == .graphicCircular
         {
-            let template = CLKComplicationTemplateGraphicCircularImage(imageProvider: CLKFullColorImageProvider(fullColorImage: UIImage(named: "Complication/Graphic Circular")!))
+            // XCode's Complications group does not have slots for
+            // the extra images needed for foreground and background variations.
+            // We have created "Graphic Circular Foreground" and "Graphic Circular Background", which are not in the Complications group in the Assets file.
+            let fullColorImage = UIImage(named: "Complication/Graphic Circular")!
+            let twoPieceImageForeground = UIImage(named: "Graphic Circular Foreground")!
+            let twoPieceImageBackground = UIImage(named: "Graphic Circular Background")!
+
+            let tintedImageProvider = CLKImageProvider(onePieceImage: twoPieceImageForeground, twoPieceImageBackground: twoPieceImageBackground, twoPieceImageForeground: twoPieceImageForeground)
+            let imageProvider = CLKFullColorImageProvider(fullColorImage: fullColorImage, tintedImageProvider: tintedImageProvider)
+            let template = CLKComplicationTemplateGraphicCircularImage(imageProvider:imageProvider)
             let timelineEntry = CLKComplicationTimelineEntry(date: Date(), complicationTemplate: template)
             handler(timelineEntry)
         }
@@ -99,7 +108,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         else if complication.family == .graphicCorner
         {
             let template = CLKComplicationTemplateGraphicCornerCircularImage(imageProvider: CLKFullColorImageProvider(fullColorImage: UIImage(named: "Graphic Corner Circular")!))
-            // Note that "Complications/Graphics Corner" is for CLKComplicationTemplateGraphicCornerTextImage.
+            // Note that "Complications/Graphic Corner" is for CLKComplicationTemplateGraphicCornerTextImage.
             // We have created "Graphic Corner Circular", which is not in the Complications group in the Assets file.
             // xCode complains if the "Graphic Corner Circular" image set is placed within the Complications group
             let timelineEntry = CLKComplicationTimelineEntry(date: Date(), complicationTemplate: template)

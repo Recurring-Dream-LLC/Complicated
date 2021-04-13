@@ -6,18 +6,18 @@
       "screen-width" : "<=145"
     },
     {
-      "filename" : "complicationGraphicCircular Copy42@2x.png",
       "idiom" : "watch",
       "scale" : "2x",
       "screen-width" : ">161"
     },
     {
+      "filename" : "complicationGraphicCircularBackground42@2x.png",
       "idiom" : "watch",
       "scale" : "2x",
       "screen-width" : ">145"
     },
     {
-      "filename" : "complicationGraphicCircular Copy47@2X.png",
+      "filename" : "complicationGraphicCircularBackground42@2x-1.png",
       "idiom" : "watch",
       "scale" : "2x",
       "screen-width" : ">183"
