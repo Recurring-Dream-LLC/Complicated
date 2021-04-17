@@ -19,14 +19,23 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         super.init()
     }
     
+    let textIdentifer = "text"
+    let graphicIdentifiter = "graphics"
+    
     // MARK: - Complication Configuration
       func getComplicationDescriptors(handler: @escaping ([CLKComplicationDescriptor]) -> Void) {
         
-        let supportedFamilies = [CLKComplicationFamily.circularSmall,CLKComplicationFamily.graphicCircular,CLKComplicationFamily.graphicCorner,CLKComplicationFamily.modularSmall,CLKComplicationFamily.utilitarianSmall]
+        let supportedFamilies = [CLKComplicationFamily.circularSmall,CLKComplicationFamily.graphicCircular,CLKComplicationFamily.modularSmall,CLKComplicationFamily.utilitarianSmall]
 
+        let graphicCornerSupportedFamilies =
+            [
+                CLKComplicationFamily.graphicCorner
+            ]
         
           let descriptors = [
-              CLKComplicationDescriptor(identifier: "complication", displayName: "Complicated", supportedFamilies: supportedFamilies)
+              CLKComplicationDescriptor(identifier: "complication", displayName: "Complicated", supportedFamilies: supportedFamilies),
+            CLKComplicationDescriptor(identifier: textIdentifer, displayName: "Text and Graphic", supportedFamilies: graphicCornerSupportedFamilies),
+            CLKComplicationDescriptor(identifier: graphicIdentifiter, displayName: "Graphic", supportedFamilies: graphicCornerSupportedFamilies)
               // Multiple complication support can be added here with more descriptors
           ]
           
@@ -107,12 +116,21 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         }
         else if complication.family == .graphicCorner
         {
-            let template = CLKComplicationTemplateGraphicCornerCircularImage(imageProvider: CLKFullColorImageProvider(fullColorImage: UIImage(named: "Graphic Corner Circular")!))
-            // Note that "Complications/Graphic Corner" is for CLKComplicationTemplateGraphicCornerTextImage.
-            // We have created "Graphic Corner Circular", which is not in the Complications group in the Assets file.
-            // xCode complains if the "Graphic Corner Circular" image set is placed within the Complications group
-            let timelineEntry = CLKComplicationTimelineEntry(date: Date(), complicationTemplate: template)
-            handler(timelineEntry)
+            if (complication.identifier == textIdentifer)
+            {
+                let template = CLKComplicationTemplateGraphicCornerTextImage(textProvider: CLKSimpleTextProvider(text: "Complicated"), imageProvider: CLKFullColorImageProvider(fullColorImage: UIImage(named: "Complication/Graphic Corner")!))
+                let timelineEntry = CLKComplicationTimelineEntry(date: Date(), complicationTemplate: template)
+                handler(timelineEntry)
+            }
+            else if (complication.identifier == graphicIdentifiter)
+            {
+                let template = CLKComplicationTemplateGraphicCornerCircularImage(imageProvider: CLKFullColorImageProvider(fullColorImage: UIImage(named: "Graphic Corner Circular")!))
+                // Note that "Complications/Graphic Corner" is for CLKComplicationTemplateGraphicCornerTextImage.
+                // We have created "Graphic Corner Circular", which is not in the Complications group in the Assets file.
+                // xCode complains if the "Graphic Corner Circular" image set is placed within the Complications group
+                let timelineEntry = CLKComplicationTimelineEntry(date: Date(), complicationTemplate: template)
+                handler(timelineEntry)
+            }
         }
         else {
             
@@ -142,11 +160,23 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
             let template = CLKComplicationTemplateUtilitarianSmallSquare(imageProvider: CLKImageProvider(onePieceImage: UIImage(named: "Complication/Utilitarian")!))
             handler(template)
         case .graphicCorner:
-            let template = CLKComplicationTemplateGraphicCornerCircularImage(imageProvider: CLKFullColorImageProvider(fullColorImage: UIImage(named: "Graphic Corner Circular")!))
-            // Note that "Complications/Graphics Corner" is for CLKComplicationTemplateGraphicCornerTextImage.
-            // We have created "Graphic Corner Circular", which is not in the Complications group in the Assets file.
-            // xCode complains if the "Graphic Corner Circular" image set is placed within the Complications group
-            handler(template)
+            if (complication.identifier == textIdentifer)
+            {
+                let template = CLKComplicationTemplateGraphicCornerTextImage(textProvider: CLKSimpleTextProvider(text: "Complicated"), imageProvider: CLKFullColorImageProvider(fullColorImage: UIImage(named: "Complication/Graphic Corner")!))
+                handler(template)
+            }
+            else if (complication.identifier == graphicIdentifiter)
+            {
+                let template = CLKComplicationTemplateGraphicCornerCircularImage(imageProvider: CLKFullColorImageProvider(fullColorImage: UIImage(named: "Graphic Corner Circular")!))
+                // Note that "Complications/Graphic Corner" is for CLKComplicationTemplateGraphicCornerTextImage.
+                // We have created "Graphic Corner Circular", which is not in the Complications group in the Assets file.
+                // xCode complains if the "Graphic Corner Circular" image set is placed within the Complications group
+                handler(template)
+            }
+            else
+            {
+                handler(nil) // there may be a .graphic corner complication without an ID from a previous install
+            }
         default:
             handler(nil)
         }
