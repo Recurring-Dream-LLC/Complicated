@@ -67,7 +67,7 @@ func loadComplications()->[Complication]
                          imageProvider: CLKImageProviderName,
                          imageProviderDocumentation: CLKImageProviderDocumentation,
                          abbreviation:"Cs",
-                         notes:"Artwork should not include the circular backgroud, it's added by watchOS",
+                         notes:"Artwork should not include the circular background, it's added by watchOS.",
                          faceNames:[
                             WatchFace(imageName: "Cs-Activity Analog-Red", displayName:"Activity Analog (Red)"),
                             WatchFace(imageName:"Cs-Color-Spearmint",displayName: "Color (Spearmint)")]))
@@ -79,7 +79,7 @@ func loadComplications()->[Complication]
                            imageProvider: CLKFullColorImageProviderName,
                            imageProviderDocumentation: CLKFullColorImageProviderDocumentation,
                            abbreviation:"Gco",
-                           notes:"",
+                           notes:"Atwork should include a background if desired. It's not added by watchOS, but it is clipped to a circle. A solid black backround on the Artboard works best.",
                            faceNames:[
                             WatchFace(imageName: "Gco-Solar Dial", displayName:"Solar Dial"),
                               WatchFace(imageName: "Gco-Infograph-Black", displayName:"Infograph (Black)"),
@@ -92,7 +92,7 @@ func loadComplications()->[Complication]
                            imageProvider: CLKFullColorImageProviderName,
                            imageProviderDocumentation:CLKFullColorImageProviderDocumentation,
                            abbreviation:"Gci",
-                           notes:"Atwork should include a circular backround if desired, it's not added by watchOS",
+                           notes:"Atwork should include a background if desired. It's not added by watchOS, but it is clipped to a circle. A background layer of #191919 works best. Foreground and background images can be used to create a partially tinted image.",
                            faceNames:[
                               WatchFace(imageName: "Gci-Infograph Modular-Multicolor", displayName:"Infograph Modular (Multicolor)"),
                               WatchFace(imageName:"Gci-Infograph Modular-Peach",displayName: "Infograph Modular (Peach)"),
@@ -105,7 +105,7 @@ func loadComplications()->[Complication]
                           imageProvider: CLKImageProviderName,
                           imageProviderDocumentation: CLKImageProviderDocumentation,
                           abbreviation:"Ms",
-                          notes:"",
+                          notes:"Multicolor faces seem to tint full color images with their dominant color, still investigating this.",
                           faceNames:[
                              WatchFace(imageName: "Ms-Modular-Multicolor", displayName:"Modular (Multicolor)"),
                              WatchFace(imageName: "Ms-Modular-Pink", displayName:"Modular (Pink)")]))
