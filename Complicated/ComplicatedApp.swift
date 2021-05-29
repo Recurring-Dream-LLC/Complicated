@@ -8,17 +8,37 @@
 
 import SwiftUI
 
+struct ComplicationTabs: View {
+    var body: some View {
+
+    TabView{
+        ComplicationList()
+            .tabItem {
+                Image(systemName: "applewatch.watchface")
+                Text("Complications")
+            }
+        AboutView()
+            .tabItem {
+                Image(systemName: "info.circle")
+                Text("About")
+            }
+        }
+    }
+}
+
+
 @main
 struct ComplicatedApp: App {
     var body: some Scene {
         WindowGroup {
-            ComplicationList()
+            ComplicationTabs()
+            
         }
     }
 }
 
 struct ComplicatedApp_Previews: PreviewProvider {
     static var previews: some View {
-        ComplicationList()
-    }
+        ComplicationTabs()
+        }
 }

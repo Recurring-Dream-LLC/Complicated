@@ -176,10 +176,6 @@ struct ComplicationDetail: View {
 
             }
             
-           // DetailRow(title: "Tintable", detail: "Yes") // Are all complications tintable now in watchOS 7?
-            
-          //  Spacer()
-
             SectionHeader(title: "Examples")
             
             FaceGallery(complication:complication)

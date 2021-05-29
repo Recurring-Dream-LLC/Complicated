@@ -79,7 +79,7 @@ func loadComplications()->[Complication]
                            imageProvider: CLKFullColorImageProviderName,
                            imageProviderDocumentation: CLKFullColorImageProviderDocumentation,
                            abbreviation:"Gco",
-                           notes:"Atwork should include a background if desired. It's not added by watchOS, but it is clipped to a circle. A solid black backround on the Artboard works best.",
+                           notes:"Artwork should include a background if desired. It's not added by watchOS, but it is clipped to a circle. A solid black backround on the Artboard works best.",
                            faceNames:[
                             WatchFace(imageName: "Gco-Solar Dial", displayName:"Solar Dial"),
                               WatchFace(imageName: "Gco-Infograph-Black", displayName:"Infograph (Black)"),
@@ -92,7 +92,7 @@ func loadComplications()->[Complication]
                            imageProvider: CLKFullColorImageProviderName,
                            imageProviderDocumentation:CLKFullColorImageProviderDocumentation,
                            abbreviation:"Gci",
-                           notes:"Atwork should include a background if desired. It's not added by watchOS, but it is clipped to a circle. A background layer of #191919 works best. Foreground and background images can be used to create a partially tinted image.",
+                           notes:"Artwork should include a background if desired. It's not added by watchOS, but it is clipped to a circle. A background layer of #191919 works best. Foreground and background images can be used to create a partially tinted complication.",
                            faceNames:[
                               WatchFace(imageName: "Gci-Infograph Modular-Multicolor", displayName:"Infograph Modular (Multicolor)"),
                               WatchFace(imageName:"Gci-Infograph Modular-Peach",displayName: "Infograph Modular (Peach)"),
