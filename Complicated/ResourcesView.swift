@@ -20,7 +20,7 @@ struct TextBody: View{
 }
 
 
-struct AboutView: View {
+struct ResourcesView: View {
     var body: some View {
         
         ScrollView(.vertical)
@@ -28,7 +28,7 @@ struct AboutView: View {
             VStack(spacing: -5){
                 SectionHeader(title: "About Complicated")
                 Spacer()
-                TextBody(title: "This is the body of the text that explains Complicated")
+                TextBody(title: "  There's almost no way to say it without making a bad pun... Apple Watch complications are complicated.\n\n  The programmatic documentation is fairly complete, but creating artwork that works well with various faces and tint modes is a bit of a puzzle, as is idendifying which complication family is used on each face.\n\n  I created Complicated as a way to understand and experiment with complications. Each family of complications displays unique initials, to clarify which is in use.\n\n  Complicated is open source, as is the image source Sketch document, which serves as further documentation of sizing and styling.")
                 
                 SectionHeader(title: "Resources")
                 DetailRow(title: "Source Code", detail: "GitHub", link: URL(string: "https://github.com/jhokit/Complicated"))
@@ -41,6 +41,6 @@ struct AboutView: View {
 
 struct AboutView_Previews: PreviewProvider {
     static var previews: some View {
-        AboutView()
+        ResourcesView()
     }
 }

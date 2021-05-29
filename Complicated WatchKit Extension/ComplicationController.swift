@@ -8,19 +8,18 @@
 
 import ClockKit
 
-
-
 //╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍
 //
 //╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍
 class ComplicationController: NSObject, CLKComplicationDataSource {
     
+    let textIdentifer = "text"
+    let graphicIdentifiter = "graphics"
+
     override init() {
         super.init()
     }
     
-    let textIdentifer = "text"
-    let graphicIdentifiter = "graphics"
     
     // MARK: - Complication Configuration
       func getComplicationDescriptors(handler: @escaping ([CLKComplicationDescriptor]) -> Void) {
@@ -33,10 +32,9 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
             ]
         
           let descriptors = [
-              CLKComplicationDescriptor(identifier: "complication", displayName: "Complicated", supportedFamilies: supportedFamilies),
+            CLKComplicationDescriptor(identifier: "complication", displayName: "Complicated", supportedFamilies: supportedFamilies),
             CLKComplicationDescriptor(identifier: textIdentifer, displayName: "Text and Graphic", supportedFamilies: graphicCornerSupportedFamilies),
             CLKComplicationDescriptor(identifier: graphicIdentifiter, displayName: "Graphic", supportedFamilies: graphicCornerSupportedFamilies)
-              // Multiple complication support can be added here with more descriptors
           ]
           
           // Call the handler with the currently supported complication descriptors
@@ -135,11 +133,8 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
             }
         }
         else {
-            
             handler(nil)
-            
         }
-        
     }
     
     

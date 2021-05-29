@@ -17,10 +17,10 @@ struct ComplicationTabs: View {
                 Image(systemName: "applewatch.watchface")
                 Text("Complications")
             }
-        AboutView()
+        ResourcesView()
             .tabItem {
                 Image(systemName: "info.circle")
-                Text("About")
+                Text("Resources")
             }
         }
     }
