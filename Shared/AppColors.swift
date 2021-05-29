@@ -16,9 +16,9 @@ import UIKit
 
 extension UIColor
 {
-    static var complicatedBlue:UIColor
+    static var complicationTint:UIColor
     {
-        return UIColor.init(red: 30.0/255.0, green: 144.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+        return UIColor.init(red: 51.0/255.0, green: 204.0/255.0, blue: 204.0/255.0, alpha: 1.0)
     }
     
     

@@ -13,6 +13,7 @@ import ClockKit
 //╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍
 class ComplicationController: NSObject, CLKComplicationDataSource {
     
+    // use these identifiers to differentiate two styles of Graphic Corner
     let textIdentifer = "text"
     let graphicIdentifiter = "graphics"
 
@@ -80,14 +81,14 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         if complication.family == .circularSmall
         {
             let template = CLKComplicationTemplateCircularSmallSimpleImage(imageProvider: CLKImageProvider(onePieceImage: UIImage(named: "Complication/Circular")!))
-            template.imageProvider.tintColor = UIColor.complicatedBlue
+            template.imageProvider.tintColor = UIColor.complicationTint
             let timelineEntry = CLKComplicationTimelineEntry(date: Date(), complicationTemplate: template)
             handler(timelineEntry)
         }
         else if complication.family == .modularSmall
         {
             let template = CLKComplicationTemplateModularSmallSimpleImage(imageProvider: CLKImageProvider(onePieceImage: UIImage(named: "Complication/Modular")!))
-            template.imageProvider.tintColor = UIColor.complicatedBlue
+            template.imageProvider.tintColor = UIColor.complicationTint
             let timelineEntry = CLKComplicationTimelineEntry(date: Date(), complicationTemplate: template)
             handler(timelineEntry)
         }
@@ -114,6 +115,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         }
         else if complication.family == .graphicCorner
         {
+            // Offer two styles for Graphic Corner, with or without a text label
             if (complication.identifier == textIdentifer)
             {
                 let template = CLKComplicationTemplateGraphicCornerTextImage(textProvider: CLKSimpleTextProvider(text: "Complicated"), imageProvider: CLKFullColorImageProvider(fullColorImage: UIImage(named: "Complication/Graphic Corner")!))
@@ -133,7 +135,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
             }
         }
         else {
-            handler(nil)
+            handler(nil) // there may be a .graphic corner complication without an ID from a previous install
         }
     }
     
@@ -144,11 +146,11 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         {
         case .circularSmall:
             let template = CLKComplicationTemplateCircularSmallSimpleImage(imageProvider: CLKImageProvider(onePieceImage: UIImage(named: "Complication/Circular")!))
-            template.imageProvider.tintColor = UIColor.complicatedBlue
+            template.imageProvider.tintColor = UIColor.complicationTint
             handler(template)
         case .modularSmall:
             let template = CLKComplicationTemplateModularSmallSimpleImage(imageProvider: CLKImageProvider(onePieceImage: UIImage(named: "Complication/Modular")!))
-            template.imageProvider.tintColor = UIColor.complicatedBlue
+            template.imageProvider.tintColor = UIColor.complicationTint
             handler(template)
         case .graphicCircular:
             let template = CLKComplicationTemplateGraphicCircularImage(imageProvider: CLKFullColorImageProvider(fullColorImage: UIImage(named: "Complication/Graphic Circular")!))

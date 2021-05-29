@@ -105,7 +105,7 @@ func loadComplications()->[Complication]
                           imageProvider: CLKImageProviderName,
                           imageProviderDocumentation: CLKImageProviderDocumentation,
                           abbreviation:"Ms",
-                          notes:"Multicolor faces seem to tint full color images with their dominant color, still investigating this.",
+                          notes:"Tint color must be added in code to display in color on Multicolor faces.",
                           faceNames:[
                              WatchFace(imageName: "Ms-Modular-Multicolor", displayName:"Modular (Multicolor)"),
                              WatchFace(imageName: "Ms-Modular-Pink", displayName:"Modular (Pink)")]))
