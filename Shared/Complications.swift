@@ -79,7 +79,7 @@ func loadComplications()->[Complication]
                            imageProvider: CLKFullColorImageProviderName,
                            imageProviderDocumentation: CLKFullColorImageProviderDocumentation,
                            abbreviation:"Gco",
-                           notes:"Artwork should include a background if desired. It's not added by watchOS, but it is clipped to a circle. A solid black backround on the Artboard works best.",
+                           notes:"Artwork should include a background if desired. It's not added by watchOS, but it is clipped to a circle. A solid black background on the Artboard works best.",
                            faceNames:[
                             WatchFace(imageName: "Gco-Solar Dial", displayName:"Solar Dial"),
                               WatchFace(imageName: "Gco-Infograph-Black", displayName:"Infograph (Black)"),
