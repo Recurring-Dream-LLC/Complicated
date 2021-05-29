@@ -16,6 +16,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     // use these identifiers to differentiate two styles of Graphic Corner
     let textIdentifer = "text"
     let graphicIdentifiter = "graphics"
+    let complicationTint = UIColor(red: 51.0/255.0, green: 204.0/255.0, blue: 204.0/255.0, alpha: 1.0)
 
     override init() {
         super.init()
@@ -81,14 +82,14 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         if complication.family == .circularSmall
         {
             let template = CLKComplicationTemplateCircularSmallSimpleImage(imageProvider: CLKImageProvider(onePieceImage: UIImage(named: "Complication/Circular")!))
-            template.imageProvider.tintColor = UIColor.complicationTint
+            template.imageProvider.tintColor = complicationTint
             let timelineEntry = CLKComplicationTimelineEntry(date: Date(), complicationTemplate: template)
             handler(timelineEntry)
         }
         else if complication.family == .modularSmall
         {
             let template = CLKComplicationTemplateModularSmallSimpleImage(imageProvider: CLKImageProvider(onePieceImage: UIImage(named: "Complication/Modular")!))
-            template.imageProvider.tintColor = UIColor.complicationTint
+            template.imageProvider.tintColor = complicationTint
             let timelineEntry = CLKComplicationTimelineEntry(date: Date(), complicationTemplate: template)
             handler(timelineEntry)
         }
@@ -146,11 +147,11 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         {
         case .circularSmall:
             let template = CLKComplicationTemplateCircularSmallSimpleImage(imageProvider: CLKImageProvider(onePieceImage: UIImage(named: "Complication/Circular")!))
-            template.imageProvider.tintColor = UIColor.complicationTint
+            template.imageProvider.tintColor = complicationTint
             handler(template)
         case .modularSmall:
             let template = CLKComplicationTemplateModularSmallSimpleImage(imageProvider: CLKImageProvider(onePieceImage: UIImage(named: "Complication/Modular")!))
-            template.imageProvider.tintColor = UIColor.complicationTint
+            template.imageProvider.tintColor = complicationTint
             handler(template)
         case .graphicCircular:
             let template = CLKComplicationTemplateGraphicCircularImage(imageProvider: CLKFullColorImageProvider(fullColorImage: UIImage(named: "Complication/Graphic Circular")!))

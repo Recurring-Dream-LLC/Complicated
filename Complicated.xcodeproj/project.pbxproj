@@ -22,7 +22,6 @@
 		72CEB97F250D8EA200FCFDAA /* ComplicatedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CEB97E250D8EA200FCFDAA /* ComplicatedApp.swift */; };
 		72CEB983250D8EA400FCFDAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72CEB982250D8EA400FCFDAA /* Assets.xcassets */; };
 		72CEB986250D8EA400FCFDAA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72CEB985250D8EA400FCFDAA /* Preview Assets.xcassets */; };
-		72CEB98B250D8F3400FCFDAA /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F6AD1A22A1EA690079C75B /* AppColors.swift */; };
 		72CEB98C250D8F3C00FCFDAA /* Complications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B46A9624685F2300DBD1C8 /* Complications.swift */; };
 		72CEB98D250D8F3F00FCFDAA /* Complication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B46A9824685F3400DBD1C8 /* Complication.swift */; };
 		72CEB98E250D8F4100FCFDAA /* ComplicationImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 726708DC2502DEF80050C8E2 /* ComplicationImages.xcassets */; };
@@ -34,7 +33,6 @@
 		72E0ECC1229B6E68006BD18F /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E0ECC0229B6E68006BD18F /* ComplicationController.swift */; };
 		72E0ECC3229B6E68006BD18F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72E0ECC2229B6E68006BD18F /* Assets.xcassets */; };
 		72F1E1012607C233007448A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72F1E1002607C233007448A4 /* Assets.xcassets */; };
-		72F6AD1C22A1EABA0079C75B /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F6AD1A22A1EA690079C75B /* AppColors.swift */; };
 		72F6AD1D22A343270079C75B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72E0ECC2229B6E68006BD18F /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -105,7 +103,6 @@
 		72E0ECC2229B6E68006BD18F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72E0ECC4229B6E68006BD18F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72F1E1002607C233007448A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		72F6AD1A22A1EA690079C75B /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,7 +200,6 @@
 		72F6AD1922A1EA3F0079C75B /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				72F6AD1A22A1EA690079C75B /* AppColors.swift */,
 				72B46A9624685F2300DBD1C8 /* Complications.swift */,
 				72B46A9824685F3400DBD1C8 /* Complication.swift */,
 				725B24682607F5690090C166 /* WatchFace.swift */,
@@ -351,7 +347,6 @@
 			files = (
 				725B24692607F5690090C166 /* WatchFace.swift in Sources */,
 				72D15777250EB88C004AAF1B /* ComplicationDetail.swift in Sources */,
-				72CEB98B250D8F3400FCFDAA /* AppColors.swift in Sources */,
 				72CEB97F250D8EA200FCFDAA /* ComplicatedApp.swift in Sources */,
 				723913482651D36B0020E000 /* ResourcesView.swift in Sources */,
 				72CEB98D250D8F3F00FCFDAA /* Complication.swift in Sources */,
@@ -369,7 +364,6 @@
 				72B46A9A24685F3D00DBD1C8 /* Complications.swift in Sources */,
 				72B46A9B24685F4000DBD1C8 /* Complication.swift in Sources */,
 				7206BBF625F6DB4A0082679D /* ComplicationRow.swift in Sources */,
-				72F6AD1C22A1EABA0079C75B /* AppColors.swift in Sources */,
 				72E0ECC1229B6E68006BD18F /* ComplicationController.swift in Sources */,
 				7206BBF125F6D9E40082679D /* ComplicationList.swift in Sources */,
 				7266733C257D5B7500E5FD8E /* ComplicatedApp.swift in Sources */,
