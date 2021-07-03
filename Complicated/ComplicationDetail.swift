@@ -153,7 +153,7 @@ struct ComplicationDetail: View {
             complication.image
                 .resizable()
                 .frame(width: 80, height: 80)
-                .padding()
+                .padding(3.0)
             
             SectionHeader(title: "Information")
 
@@ -191,7 +191,6 @@ struct ComplicationDetail_Previews: PreviewProvider {
         Group {
             ComplicationDetail(complication: complications[0])
                 .preferredColorScheme(.dark)
-//                .previewDevice(PreviewDevice(rawValue: "iPhone 12 mini"))
         }
     }
 }
