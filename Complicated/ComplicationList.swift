@@ -30,7 +30,5 @@ struct ComplicationList: View {
 struct ComplicationList_Previews: PreviewProvider {
     static var previews: some View {
         ComplicationList()
-.previewInterfaceOrientation(.landscapeLeft)
-//            .previewDevice(PreviewDevice(rawValue: "iPhone 12 Pro"))
     }
 }
