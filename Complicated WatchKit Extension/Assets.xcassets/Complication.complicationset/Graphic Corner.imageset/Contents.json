@@ -1,20 +1,9 @@
 {
   "images" : [
     {
+      "filename" : "complicationGraphicCornerText40.pdf",
       "idiom" : "watch",
-      "scale" : "2x",
-      "screen-width" : "<=145"
-    },
-    {
-      "filename" : "complicationGraphicCornerText20@2X.png",
-      "idiom" : "watch",
-      "scale" : "2x",
-      "screen-width" : ">161"
-    },
-    {
-      "idiom" : "watch",
-      "scale" : "2x",
-      "screen-width" : ">145"
+      "scale" : "2x"
     },
     {
       "filename" : "complicationGraphicCornerText22@2x.png",
@@ -26,5 +15,8 @@
   "info" : {
     "author" : "xcode",
     "version" : 1
+  },
+  "properties" : {
+    "auto-scaling" : "auto"
   }
 }
