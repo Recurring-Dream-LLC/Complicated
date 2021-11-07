@@ -30,7 +30,7 @@ struct ResourcesView: View {
                 // Resources Section
                 SectionHeader(title: "Resources")
                 DetailRow(title: "Source Code", detail: "GitHub", link: URL(string: "https://github.com/jhokit/Complicated"))
-                DetailRow(title: "Image Source", detail: "Sketch Cloud", link: URL(string: "https://www.sketch.com/s/546deabc-b998-46b0-a635-6eccb00d820b"))
+                DetailRow(title: "Image Source", detail: "Sketch Cloud", link: URL(string: "https://www.sketch.com/s/7caffcc0-1a4d-4981-af4e-c5eeed9fdf9a"))
                 
                 Spacer().frame(height:30)
                 
