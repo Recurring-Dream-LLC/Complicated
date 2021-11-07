@@ -15,6 +15,7 @@
 		7266733C257D5B7500E5FD8E /* ComplicatedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7266733B257D5B7500E5FD8E /* ComplicatedApp.swift */; };
 		726708DE2502DEF80050C8E2 /* ComplicationImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 726708DC2502DEF80050C8E2 /* ComplicationImages.xcassets */; };
 		726708DF2502DEF80050C8E2 /* ComplicationImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 726708DC2502DEF80050C8E2 /* ComplicationImages.xcassets */; };
+		72885D5727385AC000180EEF /* InterfaceDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72885D5627385AC000180EEF /* InterfaceDeviceExtension.swift */; };
 		72B46A9A24685F3D00DBD1C8 /* Complications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B46A9624685F2300DBD1C8 /* Complications.swift */; };
 		72B46A9B24685F4000DBD1C8 /* Complication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B46A9824685F3400DBD1C8 /* Complication.swift */; };
 		72C9B61526079BD70001F8FE /* WatchFaces.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72C9B61426079BD70001F8FE /* WatchFaces.xcassets */; };
@@ -85,6 +86,7 @@
 		725B24682607F5690090C166 /* WatchFace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchFace.swift; sourceTree = "<group>"; };
 		7266733B257D5B7500E5FD8E /* ComplicatedApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicatedApp.swift; sourceTree = "<group>"; };
 		726708DC2502DEF80050C8E2 /* ComplicationImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ComplicationImages.xcassets; sourceTree = "<group>"; };
+		72885D5627385AC000180EEF /* InterfaceDeviceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterfaceDeviceExtension.swift; sourceTree = "<group>"; };
 		72B46A9624685F2300DBD1C8 /* Complications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Complications.swift; sourceTree = "<group>"; };
 		72B46A9824685F3400DBD1C8 /* Complication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Complication.swift; sourceTree = "<group>"; };
 		72C9B61426079BD70001F8FE /* WatchFaces.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = WatchFaces.xcassets; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				7206BBF025F6D9E40082679D /* ComplicationList.swift */,
 				7206BBF525F6DB4A0082679D /* ComplicationRow.swift */,
 				72E0ECC0229B6E68006BD18F /* ComplicationController.swift */,
+				72885D5627385AC000180EEF /* InterfaceDeviceExtension.swift */,
 				72E0ECC2229B6E68006BD18F /* Assets.xcassets */,
 				72E0ECC4229B6E68006BD18F /* Info.plist */,
 			);
@@ -367,6 +370,7 @@
 				72E0ECC1229B6E68006BD18F /* ComplicationController.swift in Sources */,
 				7206BBF125F6D9E40082679D /* ComplicationList.swift in Sources */,
 				7266733C257D5B7500E5FD8E /* ComplicatedApp.swift in Sources */,
+				72885D5727385AC000180EEF /* InterfaceDeviceExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,7 +401,7 @@
 				DEVELOPMENT_TEAM = GAU3F6PUXE;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Complicated/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -420,7 +424,7 @@
 				DEVELOPMENT_TEAM = GAU3F6PUXE;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Complicated/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -484,7 +488,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -540,7 +544,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -568,7 +572,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 7.1;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Debug;
 		};
@@ -590,7 +594,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 7.1;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Release;
 		};
@@ -609,7 +613,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 7.1;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Debug;
 		};
@@ -628,7 +632,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 7.1;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Release;
 		};

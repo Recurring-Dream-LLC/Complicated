@@ -7,6 +7,7 @@
 //
 
 import ClockKit
+import WatchKit
 
 //╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍
 //
@@ -99,8 +100,26 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
             // the extra images needed for foreground and background variations.
             // We have created "Graphic Circular Foreground" and "Graphic Circular Background", which are not in the Complications group in the Assets file.
             let fullColorImage = UIImage(named: "Complication/Graphic Circular")!
-            let twoPieceImageForeground = UIImage(named: "Graphic Circular Foreground")!
-            let twoPieceImageBackground = UIImage(named: "Graphic Circular Background")!
+            var twoPieceImageForeground:UIImage
+            let resolution = WKInterfaceDevice.currentResolution()
+            switch resolution {
+            case .Watch41mm:
+                twoPieceImageForeground = UIImage(named: "Graphic Circular Foreground 41")!
+            case .Watch45mm:
+                twoPieceImageForeground = UIImage(named: "Graphic Circular Foreground 45")!
+            default:
+                twoPieceImageForeground = UIImage(named: "Graphic Circular Foreground")!
+            }
+
+            var twoPieceImageBackground:UIImage
+            switch resolution {
+            case .Watch41mm:
+                twoPieceImageBackground = UIImage(named: "Graphic Circular Background 41")!
+            case .Watch45mm:
+                twoPieceImageBackground = UIImage(named: "Graphic Circular Background 45")!
+            default:
+                twoPieceImageBackground = UIImage(named: "Graphic Circular Background")!
+            }
 
             let tintedImageProvider = CLKImageProvider(onePieceImage: fullColorImage, twoPieceImageBackground: twoPieceImageBackground, twoPieceImageForeground: twoPieceImageForeground)
             let imageProvider = CLKFullColorImageProvider(fullColorImage: fullColorImage, tintedImageProvider: tintedImageProvider)
@@ -125,18 +144,30 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
             }
             else if (complication.identifier == graphicIdentifiter)
             {
-                let fullColorImage = UIImage(named: "Graphic Corner Large")!
-                let template = CLKComplicationTemplateGraphicCornerCircularImage(imageProvider: CLKFullColorImageProvider(fullColorImage:fullColorImage))
-                
                 // Note that "Complications/Graphic Corner" is for CLKComplicationTemplateGraphicCornerTextImage.
                 // We have created "Graphic Corner Large", which is not in the Complications group in the Assets file.
+                // Furthermore, for Apple Watch Series 7, the sizes are not in the watch template an must be individual graphic assets
+                // Even futhermore, the documentation calls for a 76px image for 45mm, but that leads to a clipped image,
+                //  by experimentation, it seems that 78px works better. See the Sketch Template
                 // xCode complains if the "Graphic Corner Large" image set is placed within the Complications group
+                var fullColorImage:UIImage
+                let resolution = WKInterfaceDevice.currentResolution()
+                switch resolution {
+                case .Watch41mm:
+                    fullColorImage = UIImage(named: "Graphic Corner Large 41")!
+                case .Watch45mm:
+                    fullColorImage = UIImage(named: "Graphic Corner Large 45")!
+                default:
+                    fullColorImage = UIImage(named: "Graphic Corner Large")!
+                }
+                let template = CLKComplicationTemplateGraphicCornerCircularImage(imageProvider: CLKFullColorImageProvider(fullColorImage:fullColorImage))
+                
                 let timelineEntry = CLKComplicationTimelineEntry(date: Date(), complicationTemplate: template)
                 handler(timelineEntry)
             }
         }
         else {
-            handler(nil) // there may be a .graphic corner complication without an ID from a previous install
+            handler(nil) // there may be a .graphicCorner complication without an ID from a previous install
         }
     }
     
@@ -167,15 +198,28 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
             }
             else if (complication.identifier == graphicIdentifiter)
             {
-                let template = CLKComplicationTemplateGraphicCornerCircularImage(imageProvider: CLKFullColorImageProvider(fullColorImage: UIImage(named: "Graphic Corner Large")!))
                 // Note that "Complications/Graphic Corner" is for CLKComplicationTemplateGraphicCornerTextImage.
                 // We have created "Graphic Corner Large", which is not in the Complications group in the Assets file.
+                // Furthermore, for Apple Watch Series 7, the sizes are not in the watch template an must be individual graphic assets
+                // Even futhermore, the documentation calls for a 76px image for 45mm, but that leads to a clipped image,
+                //  by experimentation, it seems that 78px works better. See the Sketch Template
                 // xCode complains if the "Graphic Corner Large" image set is placed within the Complications group
+                var fullColorImage:UIImage
+                let resolution = WKInterfaceDevice.currentResolution()
+                switch resolution {
+                case .Watch41mm:
+                    fullColorImage = UIImage(named: "Graphic Corner Large 41")!
+                case .Watch45mm:
+                    fullColorImage = UIImage(named: "Graphic Corner Large 45")!
+                default:
+                    fullColorImage = UIImage(named: "Graphic Corner Large")!
+                }
+                let template = CLKComplicationTemplateGraphicCornerCircularImage(imageProvider: CLKFullColorImageProvider(fullColorImage:fullColorImage))
                 handler(template)
             }
             else
             {
-                handler(nil) // there may be a .graphic corner complication without an ID from a previous install
+                handler(nil) // there may be a .graphicCorner complication without an ID from a previous install
             }
         default:
             handler(nil)

@@ -1,23 +1,12 @@
 {
   "images" : [
     {
+      "filename" : "complicationGraphicCircular84.pdf",
       "idiom" : "watch",
-      "scale" : "2x",
-      "screen-width" : "<=145"
+      "scale" : "2x"
     },
     {
-      "filename" : "complicationGraphicCircular Copy42@2x.png",
-      "idiom" : "watch",
-      "scale" : "2x",
-      "screen-width" : ">161"
-    },
-    {
-      "idiom" : "watch",
-      "scale" : "2x",
-      "screen-width" : ">145"
-    },
-    {
-      "filename" : "complicationGraphicCircular Copy47@2X.png",
+      "filename" : "complicationGraphicCircular47@2X.png",
       "idiom" : "watch",
       "scale" : "2x",
       "screen-width" : ">183"
@@ -26,5 +15,8 @@
   "info" : {
     "author" : "xcode",
     "version" : 1
+  },
+  "properties" : {
+    "auto-scaling" : "auto"
   }
 }
