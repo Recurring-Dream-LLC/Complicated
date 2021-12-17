@@ -1,18 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "complicationModularSmall58.pdf",
       "idiom" : "watch",
       "scale" : "2x"
     },
     {
-      "filename" : "complicationModularSmall26@2x.png",
       "idiom" : "watch",
       "scale" : "2x",
       "screen-width" : "<=145"
     },
     {
-      "filename" : "complicationModularSmall32@2x.png",
       "idiom" : "watch",
       "scale" : "2x",
       "screen-width" : ">183"
