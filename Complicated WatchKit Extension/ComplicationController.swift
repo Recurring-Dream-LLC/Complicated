@@ -33,22 +33,16 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         switch resolution {
         case .Watch38mm:
             image = UIImage(named: "Circular Small 16")!
-            
         case .Watch40mm, .Watch42mm:
             image = UIImage(named: "Circular Small 18")!
-
         case .Watch41mm:
             image = UIImage(named: "Circular Small 19")!
-
         case .Watch44mm:
             image = UIImage(named: "Circular Small 20")!
-
         case .Watch45mm:
             image = UIImage(named: "Circular Small 21.5")!
-
         default:
             image = UIImage(named: "Circular Small 16")!
-
         }
         return image
     }
@@ -69,22 +63,16 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         switch resolution {
         case .Watch38mm:
             image = UIImage(named: "Modular 26")!
-            
         case .Watch40mm, .Watch42mm:
             image = UIImage(named: "Modular 29")!
-
         case .Watch41mm:
             image = UIImage(named: "Modular 30.5")!
-
         case .Watch44mm:
             image = UIImage(named: "Modular 32")!
-
         case .Watch45mm:
             image = UIImage(named: "Modular 34.5")!
-
         default:
             image = UIImage(named: "Modular 26")!
-
         }
         return image
     }
@@ -97,7 +85,79 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         return template
     }
     
+    func graphicCircularImage()->UIImage
+    {
+        var image:UIImage
+        let resolution = WKInterfaceDevice.currentResolution()
+        
+        switch resolution {
+        case .Watch40mm:
+            image = UIImage(named: "Graphic Circular 42")!
+        case .Watch41mm:
+            image = UIImage(named: "Graphic Circular 44.5")!
+        case .Watch44mm:
+            image = UIImage(named: "Graphic Circular 47")!
+        case .Watch45mm:
+            image = UIImage(named: "Graphic Circular 50")!
+        default:
+            image = UIImage(named: "Graphic Circular 42")!
+        }
+        return image
+    }
+
+    func graphicCircularForegroundImage()->UIImage
+    {
+        var image:UIImage
+        let resolution = WKInterfaceDevice.currentResolution()
+        
+        switch resolution {
+        case .Watch40mm:
+            image = UIImage(named: "Graphic Circular Foreground 42")!
+        case .Watch41mm:
+            image = UIImage(named: "Graphic Circular Foreground 44.5")!
+        case .Watch44mm:
+            image = UIImage(named: "Graphic Circular Foreground 47")!
+        case .Watch45mm:
+            image = UIImage(named: "Graphic Circular Foreground 50")!
+        default:
+            image = UIImage(named: "Graphic Circular Foreground 42")!
+        }
+        return image
+    }
     
+    
+    func graphicCircularBackgroundImage()->UIImage
+    {
+        var image:UIImage
+        let resolution = WKInterfaceDevice.currentResolution()
+        
+        switch resolution {
+        case .Watch40mm:
+            image = UIImage(named: "Graphic Circular Background 42")!
+        case .Watch41mm:
+            image = UIImage(named: "Graphic Circular Background 44.5")!
+        case .Watch44mm:
+            image = UIImage(named: "Graphic Circular Background 47")!
+        case .Watch45mm:
+            image = UIImage(named: "Graphic Circular Background 50")!
+        default:
+            image = UIImage(named: "Graphic Circular Background 42")!
+        }
+        return image
+    }
+
+    func graphicCircularTemplate()->CLKComplicationTemplate
+    {
+        let fullColorImage = graphicCircularImage()
+        let twoPieceImageForeground = graphicCircularForegroundImage()
+        let twoPieceImageBackground = graphicCircularBackgroundImage()
+        let tintedImageProvider = CLKImageProvider(onePieceImage: fullColorImage, twoPieceImageBackground: twoPieceImageBackground, twoPieceImageForeground: twoPieceImageForeground)
+        let imageProvider = CLKFullColorImageProvider(fullColorImage: fullColorImage, tintedImageProvider: tintedImageProvider)
+        let template = CLKComplicationTemplateGraphicCircularImage(imageProvider:imageProvider)
+        return template
+    }
+
+
     // MARK: - Complication Configuration
       func getComplicationDescriptors(handler: @escaping ([CLKComplicationDescriptor]) -> Void) {
         
@@ -166,35 +226,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         }
         else if complication.family == .graphicCircular
         {
-            // XCode's Complications group does not have slots for
-            // the extra images needed for foreground and background variations.
-            // We have created "Graphic Circular Foreground" and "Graphic Circular Background", which are not in the Complications group in the Assets file.
-            let fullColorImage = UIImage(named: "Complication/Graphic Circular")!
-            var twoPieceImageForeground:UIImage
-            let resolution = WKInterfaceDevice.currentResolution()
-            switch resolution {
-            case .Watch41mm:
-                twoPieceImageForeground = UIImage(named: "Graphic Circular Foreground 41")!
-            case .Watch45mm:
-                twoPieceImageForeground = UIImage(named: "Graphic Circular Foreground 45")!
-            default:
-                twoPieceImageForeground = UIImage(named: "Graphic Circular Foreground")!
-            }
-
-            var twoPieceImageBackground:UIImage
-            switch resolution {
-            case .Watch41mm:
-                twoPieceImageBackground = UIImage(named: "Graphic Circular Background 41")!
-            case .Watch45mm:
-                twoPieceImageBackground = UIImage(named: "Graphic Circular Background 45")!
-            default:
-                twoPieceImageBackground = UIImage(named: "Graphic Circular Background")!
-            }
-
-            let tintedImageProvider = CLKImageProvider(onePieceImage: fullColorImage, twoPieceImageBackground: twoPieceImageBackground, twoPieceImageForeground: twoPieceImageForeground)
-            let imageProvider = CLKFullColorImageProvider(fullColorImage: fullColorImage, tintedImageProvider: tintedImageProvider)
-            let template = CLKComplicationTemplateGraphicCircularImage(imageProvider:imageProvider)
-            let timelineEntry = CLKComplicationTimelineEntry(date: Date(), complicationTemplate: template)
+            let timelineEntry = CLKComplicationTimelineEntry(date: Date(), complicationTemplate: graphicCircularTemplate())
             handler(timelineEntry)
         }
         else if complication.family == .utilitarianSmall
@@ -251,8 +283,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         case .modularSmall:
             handler(modularTemplate())
         case .graphicCircular:
-            let template = CLKComplicationTemplateGraphicCircularImage(imageProvider: CLKFullColorImageProvider(fullColorImage: UIImage(named: "Complication/Graphic Circular")!))
-            handler(template)
+            handler(graphicCircularTemplate())
         case .utilitarianSmall:
             let template = CLKComplicationTemplateUtilitarianSmallSquare(imageProvider: CLKImageProvider(onePieceImage: UIImage(named: "Complication/Utilitarian")!))
             handler(template)

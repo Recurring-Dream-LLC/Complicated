@@ -54,4 +54,21 @@ class Complicated_WatchKit_ExtensionTests: XCTestCase {
         try imageCheck("Modular 34.5")
     }
 
+    func testGraphicCircular() throws {
+        try imageCheck("Graphic Circular 42")
+        try imageCheck("Graphic Circular 44.5")
+        try imageCheck("Graphic Circular 47")
+        try imageCheck("Graphic Circular 50")
+
+        try imageCheck("Graphic Circular Foreground 42")
+        try imageCheck("Graphic Circular Foreground 44.5")
+        try imageCheck("Graphic Circular Foreground 47")
+        try imageCheck("Graphic Circular Foreground 50")
+        
+        try imageCheck("Graphic Circular Background 42")
+        try imageCheck("Graphic Circular Background 44.5")
+        try imageCheck("Graphic Circular Background 47")
+        try imageCheck("Graphic Circular Background 50")
+    }
+
 }
