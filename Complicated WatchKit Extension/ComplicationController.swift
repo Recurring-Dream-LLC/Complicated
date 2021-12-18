@@ -62,22 +62,22 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         
         switch resolution {
         case .Watch38mm:
-            image = UIImage(named: "Modular 26")!
+            image = UIImage(named: "Modular Small 26")!
         case .Watch40mm, .Watch42mm:
-            image = UIImage(named: "Modular 29")!
+            image = UIImage(named: "Modular Small 29")!
         case .Watch41mm:
-            image = UIImage(named: "Modular 30.5")!
+            image = UIImage(named: "Modular Small 30.5")!
         case .Watch44mm:
-            image = UIImage(named: "Modular 32")!
+            image = UIImage(named: "Modular Small 32")!
         case .Watch45mm:
-            image = UIImage(named: "Modular 34.5")!
+            image = UIImage(named: "Modular Small 34.5")!
         default:
-            image = UIImage(named: "Modular 26")!
+            image = UIImage(named: "Modular Small 26")!
         }
         return image
     }
 
-    func modularTemplate()->CLKComplicationTemplate
+    func modularSmallTemplate()->CLKComplicationTemplate
     {
         let image = modularSmallImage()
         let template = CLKComplicationTemplateModularSmallSimpleImage(imageProvider: CLKImageProvider(onePieceImage:image))
@@ -158,6 +158,91 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     }
 
 
+    func graphicCornerCircularImage()->UIImage
+    {
+        var image:UIImage
+        let resolution = WKInterfaceDevice.currentResolution()
+        
+        switch resolution {
+        case .Watch40mm:
+            image = UIImage(named: "Graphic Corner Circular 32")!
+        case .Watch41mm:
+            image = UIImage(named: "Graphic Corner Circular 34")!
+        case .Watch44mm:
+            image = UIImage(named: "Graphic Corner Circular 36")!
+        case .Watch45mm:
+            image = UIImage(named: "Graphic Corner Circular 39")!
+        default:
+            image = UIImage(named: "Graphic Corner Circular 32")!
+        }
+        return image
+    }
+    
+    func graphicCornerCircularTemplate()->CLKComplicationTemplate
+    {
+        let image = graphicCornerCircularImage()
+        let template = CLKComplicationTemplateGraphicCornerCircularImage(imageProvider: CLKFullColorImageProvider(fullColorImage:image))
+        return template
+    }
+
+    
+    func graphicCornerTextImage()->UIImage
+    {
+        var image:UIImage
+        let resolution = WKInterfaceDevice.currentResolution()
+        
+        switch resolution {
+        case .Watch40mm:
+            image = UIImage(named: "Graphic Corner Text 20")!
+        case .Watch41mm:
+            image = UIImage(named: "Graphic Corner Text 21")!
+        case .Watch44mm:
+            image = UIImage(named: "Graphic Corner Text 22")!
+        case .Watch45mm:
+            image = UIImage(named: "Graphic Corner Text 24")!
+        default:
+            image = UIImage(named: "Graphic Corner Text 20")!
+        }
+        return image
+    }
+    
+    func graphicCornerTextTemplate()->CLKComplicationTemplate
+    {
+        let image = graphicCornerTextImage()
+        let template = CLKComplicationTemplateGraphicCornerTextImage(textProvider: CLKSimpleTextProvider(text: "Complicated"), imageProvider: CLKFullColorImageProvider(fullColorImage: image))
+        return template
+    }
+    
+    func utilitarianSmallImage()->UIImage
+    {
+        var image:UIImage
+        let resolution = WKInterfaceDevice.currentResolution()
+        
+        switch resolution {
+        case .Watch38mm:
+            image = UIImage(named: "Utilitarian Small 20")!
+        case .Watch40mm, .Watch42mm:
+            image = UIImage(named: "Utilitarian Small 22")!
+        case .Watch41mm:
+            image = UIImage(named: "Utilitarian Small 23.5")!
+        case .Watch44mm:
+            image = UIImage(named: "Utilitarian Small 25")!
+        case .Watch45mm:
+            image = UIImage(named: "Utilitarian Small 26")!
+        default:
+            image = UIImage(named: "Utilitarian Small 20")!
+        }
+        return image
+    }
+
+    func utilitarianSmallTemplate()->CLKComplicationTemplate
+    {
+        let image = utilitarianSmallImage()
+        let template = CLKComplicationTemplateUtilitarianSmallSquare(imageProvider: CLKImageProvider(onePieceImage:image))
+        template.imageProvider.tintColor = complicationTint
+        return template
+    }
+
     // MARK: - Complication Configuration
       func getComplicationDescriptors(handler: @escaping ([CLKComplicationDescriptor]) -> Void) {
         
@@ -221,7 +306,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         }
         else if complication.family == .modularSmall
         {
-            let timelineEntry = CLKComplicationTimelineEntry(date: Date(), complicationTemplate: modularTemplate())
+            let timelineEntry = CLKComplicationTimelineEntry(date: Date(), complicationTemplate: modularSmallTemplate())
             handler(timelineEntry)
         }
         else if complication.family == .graphicCircular
@@ -231,8 +316,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         }
         else if complication.family == .utilitarianSmall
         {
-            let template = CLKComplicationTemplateUtilitarianSmallSquare(imageProvider: CLKImageProvider(onePieceImage: UIImage(named: "Complication/Utilitarian")!))
-            let timelineEntry = CLKComplicationTimelineEntry(date: Date(), complicationTemplate: template)
+            let timelineEntry = CLKComplicationTimelineEntry(date: Date(), complicationTemplate: utilitarianSmallTemplate())
             handler(timelineEntry)
         }
         else if complication.family == .graphicCorner
@@ -240,31 +324,12 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
             // Offer two styles for Graphic Corner, with or without a text label
             if (complication.identifier == textIdentifer)
             {
-                let template = CLKComplicationTemplateGraphicCornerTextImage(textProvider: CLKSimpleTextProvider(text: "Complicated"), imageProvider: CLKFullColorImageProvider(fullColorImage: UIImage(named: "Complication/Graphic Corner")!))
-                let timelineEntry = CLKComplicationTimelineEntry(date: Date(), complicationTemplate: template)
+                let timelineEntry = CLKComplicationTimelineEntry(date: Date(), complicationTemplate: graphicCornerTextTemplate())
                 handler(timelineEntry)
             }
             else if (complication.identifier == graphicIdentifiter)
             {
-                // Note that "Complications/Graphic Corner" is for CLKComplicationTemplateGraphicCornerTextImage.
-                // We have created "Graphic Corner Large", which is not in the Complications group in the Assets file.
-                // Furthermore, for Apple Watch Series 7, the sizes are not in the watch template an must be individual graphic assets
-                // Even futhermore, the documentation calls for a 76px image for 45mm, but that leads to a clipped image,
-                //  by experimentation, it seems that 78px works better. See the Sketch Template
-                // xCode complains if the "Graphic Corner Large" image set is placed within the Complications group
-                var fullColorImage:UIImage
-                let resolution = WKInterfaceDevice.currentResolution()
-                switch resolution {
-                case .Watch41mm:
-                    fullColorImage = UIImage(named: "Graphic Corner Large 41")!
-                case .Watch45mm:
-                    fullColorImage = UIImage(named: "Graphic Corner Large 45")!
-                default:
-                    fullColorImage = UIImage(named: "Graphic Corner Large")!
-                }
-                let template = CLKComplicationTemplateGraphicCornerCircularImage(imageProvider: CLKFullColorImageProvider(fullColorImage:fullColorImage))
-                
-                let timelineEntry = CLKComplicationTimelineEntry(date: Date(), complicationTemplate: template)
+                let timelineEntry = CLKComplicationTimelineEntry(date: Date(), complicationTemplate: graphicCornerCircularTemplate())
                 handler(timelineEntry)
             }
         }
@@ -281,38 +346,19 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         case .circularSmall:
             handler(circularSmallTemplate())
         case .modularSmall:
-            handler(modularTemplate())
+            handler(modularSmallTemplate())
         case .graphicCircular:
             handler(graphicCircularTemplate())
         case .utilitarianSmall:
-            let template = CLKComplicationTemplateUtilitarianSmallSquare(imageProvider: CLKImageProvider(onePieceImage: UIImage(named: "Complication/Utilitarian")!))
-            handler(template)
+            handler(utilitarianSmallTemplate())
         case .graphicCorner:
             if (complication.identifier == textIdentifer)
             {
-                let template = CLKComplicationTemplateGraphicCornerTextImage(textProvider: CLKSimpleTextProvider(text: "Complicated"), imageProvider: CLKFullColorImageProvider(fullColorImage: UIImage(named: "Complication/Graphic Corner")!))
-                handler(template)
+                handler(graphicCornerTextTemplate())
             }
             else if (complication.identifier == graphicIdentifiter)
             {
-                // Note that "Complications/Graphic Corner" is for CLKComplicationTemplateGraphicCornerTextImage.
-                // We have created "Graphic Corner Large", which is not in the Complications group in the Assets file.
-                // Furthermore, for Apple Watch Series 7, the sizes are not in the watch template an must be individual graphic assets
-                // Even futhermore, the documentation calls for a 76px image for 45mm, but that leads to a clipped image,
-                //  by experimentation, it seems that 78px works better. See the Sketch Template
-                // xCode complains if the "Graphic Corner Large" image set is placed within the Complications group
-                var fullColorImage:UIImage
-                let resolution = WKInterfaceDevice.currentResolution()
-                switch resolution {
-                case .Watch41mm:
-                    fullColorImage = UIImage(named: "Graphic Corner Large 41")!
-                case .Watch45mm:
-                    fullColorImage = UIImage(named: "Graphic Corner Large 45")!
-                default:
-                    fullColorImage = UIImage(named: "Graphic Corner Large")!
-                }
-                let template = CLKComplicationTemplateGraphicCornerCircularImage(imageProvider: CLKFullColorImageProvider(fullColorImage:fullColorImage))
-                handler(template)
+                handler(graphicCornerCircularTemplate())
             }
             else
             {

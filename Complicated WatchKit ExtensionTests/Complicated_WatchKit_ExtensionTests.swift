@@ -46,12 +46,12 @@ class Complicated_WatchKit_ExtensionTests: XCTestCase {
         try imageCheck("Circular Small 21.5")
     }
 
-    func testModular() throws {
-        try imageCheck("Modular 26")
-        try imageCheck("Modular 29")
-        try imageCheck("Modular 30.5")
-        try imageCheck("Modular 32")
-        try imageCheck("Modular 34.5")
+    func testModularSmall() throws {
+        try imageCheck("Modular Small 26")
+        try imageCheck("Modular Small 29")
+        try imageCheck("Modular Small 30.5")
+        try imageCheck("Modular Small 32")
+        try imageCheck("Modular Small 34.5")
     }
 
     func testGraphicCircular() throws {
@@ -69,6 +69,28 @@ class Complicated_WatchKit_ExtensionTests: XCTestCase {
         try imageCheck("Graphic Circular Background 44.5")
         try imageCheck("Graphic Circular Background 47")
         try imageCheck("Graphic Circular Background 50")
+    }
+
+    func testGraphicCornerCircular() throws {
+        try imageCheck("Graphic Corner Circular 32")
+        try imageCheck("Graphic Corner Circular 34")
+        try imageCheck("Graphic Corner Circular 36")
+        try imageCheck("Graphic Corner Circular 39")
+    }
+    
+    func testGraphicCornerText() throws {
+        try imageCheck("Graphic Corner Text 20")
+        try imageCheck("Graphic Corner Text 21")
+        try imageCheck("Graphic Corner Text 22")
+        try imageCheck("Graphic Corner Text 24")
+    }
+
+    func testUtilitarianSmall() throws {
+        try imageCheck("Utilitarian Small 20")
+        try imageCheck("Utilitarian Small 22")
+        try imageCheck("Utilitarian Small 23.5")
+        try imageCheck("Utilitarian Small 25")
+        try imageCheck("Utilitarian Small 26")
     }
 
 }
