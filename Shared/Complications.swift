@@ -21,7 +21,8 @@ fileprivate let docsPath = "https://developer.apple.com/documentation/clockkit/"
 // family constants
 fileprivate enum CKFamily{
     static let CircularSmallDocumentation = URL(string: docsPath + "circular_small")!
-    static let GraphicCornerDocumentation = URL(string: docsPath + "graphic")!
+    static let GraphicCornerCircularDocumentation = URL(string: docsPath + "graphic")!
+    static let GraphicCornerTextDocumentation = URL(string: docsPath + "graphic")!
     static let GraphicCircularDocumentation = URL(string: docsPath + "graphic")!
     static let ModularSmallDocumentation = URL(string: docsPath + "modular_small")!
     static let UtilitarianSmallDocumentation = URL(string: docsPath + "modular_small")!
@@ -36,6 +37,9 @@ fileprivate enum CKTemplate
     static let GraphicCornerCircularImageName = "CLKComplicationTemplateGraphicCornerCircularImage"
     static let GraphicCornerCircularImageDocumentation = URL(string: docsPath + "clkcomplicationtemplategraphiccornercircularimage")!
     
+    static let GraphicCornerTextImageName = "CLKComplicationTemplateGraphicCornerTextImage"
+    static let GraphicCornerTextImageDocumentation = URL(string: docsPath + "clkcomplicationtemplategraphiccornertextimage")!
+
     static let GraphicCircularImageName = "CLKComplicationTemplateGraphicCircularImage"
     static let GraphicCircularImageDocumentation = URL(string: docsPath + "clkcomplicationtemplategraphiccircularimage")!
     
@@ -72,7 +76,7 @@ func loadComplications()->[Complication]
                             WatchFace(imageName: "Cs-Activity Analog-Red", displayName:"Activity Analog (Red)"),
                             WatchFace(imageName:"Cs-Color-Spearmint",displayName: "Color (Spearmint)")]))
 
-    complications.append(Complication(familyName:"Graphic Corner",
+    complications.append(Complication(familyName:"Graphic Corner (Circular)",
                            complicationFamily:".graphicCorner",
                            template: CKTemplate.GraphicCornerCircularImageName,
                            templateDocumentation: CKTemplate.GraphicCornerCircularImageDocumentation,
@@ -85,6 +89,20 @@ func loadComplications()->[Complication]
                               WatchFace(imageName: "Gco-Infograph-Black", displayName:"Infograph (Black)"),
                               WatchFace(imageName:"Gco-Infograph-Peach",displayName: "Infograph (Peach)")]))
 
+    complications.append(Complication(familyName:"Graphic Corner (Text)",
+                           complicationFamily:".graphicCorner",
+                           template: CKTemplate.GraphicCornerTextImageName,
+                           templateDocumentation: CKTemplate.GraphicCornerTextImageDocumentation,
+                           imageProvider: CLKFullColorImageProviderName,
+                           imageProviderDocumentation: CLKFullColorImageProviderDocumentation,
+                           abbreviation:"Gct",
+                           notes:"Artwork should include a background if desired. It's not added by watchOS, but it is clipped to a circle. A solid black background on the Artboard works best.",
+                           faceNames:[
+                            WatchFace(imageName: "Gct-Solar Dial", displayName:"Solar Dial"),
+                              WatchFace(imageName: "Gct-Infograph-Black", displayName:"Infograph (Black)"),
+                              WatchFace(imageName:"Gct-Infograph-Peach",displayName: "Infograph (Peach)")]))
+
+    
     complications.append(Complication(familyName:"Graphic Circular",
                            complicationFamily:".graphicCircular",
                            template: CKTemplate.GraphicCircularImageName,
