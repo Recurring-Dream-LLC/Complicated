@@ -11,7 +11,7 @@
 import WatchKit
 
 enum WatchResolution {
-    case Watch38mm,Watch40mm,Watch41mm,Watch42mm,Watch44mm,Watch45mm,Unknown
+    case Watch38mm,Watch40mm,Watch41mm,Watch42mm,Watch44mm,Watch45mm,Watch49mm,Unknown
 }
 
 extension WKInterfaceDevice {
@@ -22,6 +22,7 @@ extension WKInterfaceDevice {
         let watch42mmRect = CGRect(x: 0, y: 0, width: 156, height: 195)
         let watch44mmRect = CGRect(x: 0, y: 0, width: 184, height: 224)
         let watch45mmRect = CGRect(x: 0, y: 0, width: 198, height: 242)
+        let watch49mmRect = CGRect(x: 0, y: 0, width: 205, height: 251)
 
         let currentBounds = WKInterfaceDevice.current().screenBounds
         
@@ -38,6 +39,8 @@ extension WKInterfaceDevice {
             return .Watch44mm
         case watch45mmRect:
             return .Watch45mm
+        case watch49mmRect:
+            return .Watch49mm
         default:
             return .Unknown
         }
