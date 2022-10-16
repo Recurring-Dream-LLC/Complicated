@@ -118,12 +118,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7253F506276CD69C00FD2904 /* Complicated WatchKit ExtensionTests */ = {
+		7253F506276CD69C00FD2904 /* Complicated WatchKit Tests */ = {
 			isa = PBXGroup;
 			children = (
 				7253F507276CD69C00FD2904 /* Complicated_WatchKit_ExtensionTests.swift */,
 			);
-			path = "Complicated WatchKit ExtensionTests";
+			path = "Complicated WatchKit Tests";
 			sourceTree = "<group>";
 		};
 		72CEB97D250D8EA200FCFDAA /* Complicated */ = {
@@ -162,7 +162,7 @@
 				72CEB97D250D8EA200FCFDAA /* Complicated */,
 				72F6AD1922A1EA3F0079C75B /* Shared */,
 				72E0ECAC229B6E67006BD18F /* Complicated WatchKit App */,
-				7253F506276CD69C00FD2904 /* Complicated WatchKit ExtensionTests */,
+				7253F506276CD69C00FD2904 /* Complicated WatchKit Tests */,
 				72E0EC97229B6E66006BD18F /* Products */,
 				72D15778250EC86C004AAF1B /* Frameworks */,
 			);
