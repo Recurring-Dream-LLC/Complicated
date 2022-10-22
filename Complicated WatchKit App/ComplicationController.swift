@@ -39,7 +39,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
             image = UIImage(named: "Circular Small 19")!
         case .Watch44mm:
             image = UIImage(named: "Circular Small 20")!
-        case .Watch45mm:
+        case .Watch45mm, .Watch49mm:
             image = UIImage(named: "Circular Small 21.5")!
         default:
             image = UIImage(named: "Circular Small 16")!
@@ -69,7 +69,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
             image = UIImage(named: "Modular Small 30.5")!
         case .Watch44mm:
             image = UIImage(named: "Modular Small 32")!
-        case .Watch45mm:
+        case .Watch45mm, .Watch49mm:
             image = UIImage(named: "Modular Small 34.5")!
         default:
             image = UIImage(named: "Modular Small 26")!
@@ -97,7 +97,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
             image = UIImage(named: "Graphic Circular 44.5")!
         case .Watch44mm:
             image = UIImage(named: "Graphic Circular 47")!
-        case .Watch45mm:
+        case .Watch45mm, .Watch49mm:
             image = UIImage(named: "Graphic Circular 50")!
         default:
             image = UIImage(named: "Graphic Circular 42")!
@@ -117,7 +117,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
             image = UIImage(named: "Graphic Circular Foreground 44.5")!
         case .Watch44mm:
             image = UIImage(named: "Graphic Circular Foreground 47")!
-        case .Watch45mm:
+        case .Watch45mm, .Watch49mm:
             image = UIImage(named: "Graphic Circular Foreground 50")!
         default:
             image = UIImage(named: "Graphic Circular Foreground 42")!
@@ -138,7 +138,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
             image = UIImage(named: "Graphic Circular Background 44.5")!
         case .Watch44mm:
             image = UIImage(named: "Graphic Circular Background 47")!
-        case .Watch45mm:
+        case .Watch45mm, .Watch49mm:
             image = UIImage(named: "Graphic Circular Background 50")!
         default:
             image = UIImage(named: "Graphic Circular Background 42")!
@@ -170,7 +170,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
             image = UIImage(named: "Graphic Corner Circular 34")!
         case .Watch44mm:
             image = UIImage(named: "Graphic Corner Circular 36")!
-        case .Watch45mm:
+        case .Watch45mm, .Watch49mm:
             image = UIImage(named: "Graphic Corner Circular 39")!
         default:
             image = UIImage(named: "Graphic Corner Circular 32")!
@@ -198,7 +198,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
             image = UIImage(named: "Graphic Corner Text 21")!
         case .Watch44mm:
             image = UIImage(named: "Graphic Corner Text 22")!
-        case .Watch45mm:
+        case .Watch45mm, .Watch49mm:
             image = UIImage(named: "Graphic Corner Text 24")!
         default:
             image = UIImage(named: "Graphic Corner Text 20")!
@@ -227,7 +227,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
             image = UIImage(named: "Utilitarian Small 23.5")!
         case .Watch44mm:
             image = UIImage(named: "Utilitarian Small 25")!
-        case .Watch45mm:
+        case .Watch45mm, .Watch49mm:
             image = UIImage(named: "Utilitarian Small 26")!
         default:
             image = UIImage(named: "Utilitarian Small 20")!
