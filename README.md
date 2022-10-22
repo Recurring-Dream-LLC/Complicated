@@ -7,4 +7,4 @@ I created Complicated as a way to understand and experiment with complications. 
 
 Complicated's image source Sketch document, which serves as further documentation of sizing and styling, is available within the app.
 
-watchOS 8 and Apple Watch Series 7 created new difficulties, with incorrect templates and documentation. Version 1.1 shows workarounds.
+New watch releases often create new difficulties, with incorrect Xcode templates and documentation. Complicated demonstrates a naming and storage convention that works around outdated templates.
