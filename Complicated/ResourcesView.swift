@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import RecurringDreamUtilities
 
 struct TextBody: View{
     var title:String
@@ -40,10 +41,7 @@ struct ResourcesView: View {
                 TextBody(title: "  There's almost no way to say it without making a bad pun... Apple Watch complications are complicated.\n\n  The programmatic documentation is often outdated, missing images sizes for new models. The Xcode templates are also out of date. \n\n  Creating artwork that works well with various faces and tint modes is a bit of a puzzle, as is identifying which complication family is used on each face.\n\n  I created Complicated as a way to understand and experiment with complications. Each complication family displays unique initials, to clarify which is in use.\n\n  To work around Xcode's broken templates, I've created a new image naming scheme that can be seen in Complicated's Asset files and ComplicationController.swift.\n\n  Complicated is open source, as is the image source Sketch document, which serves as further documentation of sizing and styling.")
                 
                 // Version String
-                let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
-                let build = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as! String
-                let versionString = "Version " + version + " (" + build + ")"
-                TextBody(title:versionString)
+                TextBody(title:versionString())
 
             }.padding()
         }.frame(maxWidth: 600)
