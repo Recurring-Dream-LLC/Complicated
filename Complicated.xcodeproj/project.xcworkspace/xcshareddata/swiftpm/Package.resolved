@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "recurringdreamutilities",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Recurring-Dream-LLC/RecurringDreamUtilities",
+      "state" : {
+        "revision" : "6d30d49b75acde3d3e55979d8d465e0b4775ef29",
+        "version" : "1.0.0"
+      }
+    }
+  ],
+  "version" : 2
+}
