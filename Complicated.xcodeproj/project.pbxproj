@@ -16,9 +16,10 @@
 		725B246A2607F5690090C166 /* WatchFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725B24682607F5690090C166 /* WatchFace.swift */; };
 		7266733C257D5B7500E5FD8E /* ComplicatedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7266733B257D5B7500E5FD8E /* ComplicatedApp.swift */; };
 		726708DF2502DEF80050C8E2 /* ComplicationImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 726708DC2502DEF80050C8E2 /* ComplicationImages.xcassets */; };
-		72885D5727385AC000180EEF /* InterfaceDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72885D5627385AC000180EEF /* InterfaceDeviceExtension.swift */; };
 		72B46A9A24685F3D00DBD1C8 /* Complications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B46A9624685F2300DBD1C8 /* Complications.swift */; };
 		72B46A9B24685F4000DBD1C8 /* Complication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B46A9824685F3400DBD1C8 /* Complication.swift */; };
+		72C898B92905E66300E56773 /* RecurringDreamUtilities in Frameworks */ = {isa = PBXBuildFile; productRef = 72C898B82905E66300E56773 /* RecurringDreamUtilities */; };
+		72C898BB2905E6DA00E56773 /* RecurringDreamUtilities in Frameworks */ = {isa = PBXBuildFile; productRef = 72C898BA2905E6DA00E56773 /* RecurringDreamUtilities */; };
 		72C9B61526079BD70001F8FE /* WatchFaces.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72C9B61426079BD70001F8FE /* WatchFaces.xcassets */; };
 		72C9B61626079BD70001F8FE /* WatchFaces.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72C9B61426079BD70001F8FE /* WatchFaces.xcassets */; };
 		72CEB97F250D8EA200FCFDAA /* ComplicatedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CEB97E250D8EA200FCFDAA /* ComplicatedApp.swift */; };
@@ -75,7 +76,6 @@
 		725B24682607F5690090C166 /* WatchFace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchFace.swift; sourceTree = "<group>"; };
 		7266733B257D5B7500E5FD8E /* ComplicatedApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicatedApp.swift; sourceTree = "<group>"; };
 		726708DC2502DEF80050C8E2 /* ComplicationImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ComplicationImages.xcassets; sourceTree = "<group>"; };
-		72885D5627385AC000180EEF /* InterfaceDeviceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterfaceDeviceExtension.swift; sourceTree = "<group>"; };
 		72B46A9624685F2300DBD1C8 /* Complications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Complications.swift; sourceTree = "<group>"; };
 		72B46A9824685F3400DBD1C8 /* Complication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Complication.swift; sourceTree = "<group>"; };
 		72C9B61426079BD70001F8FE /* WatchFaces.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = WatchFaces.xcassets; sourceTree = "<group>"; };
@@ -105,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72C898B92905E66300E56773 /* RecurringDreamUtilities in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72C898BB2905E6DA00E56773 /* RecurringDreamUtilities in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,7 +188,6 @@
 				7206BBF025F6D9E40082679D /* ComplicationList.swift */,
 				7206BBF525F6DB4A0082679D /* ComplicationRow.swift */,
 				72E0ECC0229B6E68006BD18F /* ComplicationController.swift */,
-				72885D5627385AC000180EEF /* InterfaceDeviceExtension.swift */,
 				72E0ECC2229B6E68006BD18F /* Assets.xcassets */,
 			);
 			path = "Complicated WatchKit App";
@@ -240,6 +241,9 @@
 				72D1577B250EC86C004AAF1B /* PBXTargetDependency */,
 			);
 			name = Complicated;
+			packageProductDependencies = (
+				72C898B82905E66300E56773 /* RecurringDreamUtilities */,
+			);
 			productName = ComplicatedUI;
 			productReference = 72CEB97C250D8EA200FCFDAA /* Complicated.app */;
 			productType = "com.apple.product-type.application";
@@ -257,6 +261,9 @@
 			dependencies = (
 			);
 			name = "Complicated WatchKit App";
+			packageProductDependencies = (
+				72C898BA2905E6DA00E56773 /* RecurringDreamUtilities */,
+			);
 			productName = "Complicated WatchKit App";
 			productReference = 72E0ECA8229B6E67006BD18F /* Complicated WatchKit App.app */;
 			productType = "com.apple.product-type.application";
@@ -292,6 +299,9 @@
 				Base,
 			);
 			mainGroup = 72E0EC8D229B6E66006BD18F;
+			packageReferences = (
+				72C898B72905E66300E56773 /* XCRemoteSwiftPackageReference "RecurringDreamUtilities" */,
+			);
 			productRefGroup = 72E0EC97229B6E66006BD18F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -370,7 +380,6 @@
 				72E0ECC1229B6E68006BD18F /* ComplicationController.swift in Sources */,
 				7206BBF125F6D9E40082679D /* ComplicationList.swift in Sources */,
 				7266733C257D5B7500E5FD8E /* ComplicatedApp.swift in Sources */,
-				72885D5727385AC000180EEF /* InterfaceDeviceExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -688,6 +697,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		72C898B72905E66300E56773 /* XCRemoteSwiftPackageReference "RecurringDreamUtilities" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Recurring-Dream-LLC/RecurringDreamUtilities";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		72C898B82905E66300E56773 /* RecurringDreamUtilities */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 72C898B72905E66300E56773 /* XCRemoteSwiftPackageReference "RecurringDreamUtilities" */;
+			productName = RecurringDreamUtilities;
+		};
+		72C898BA2905E6DA00E56773 /* RecurringDreamUtilities */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 72C898B72905E66300E56773 /* XCRemoteSwiftPackageReference "RecurringDreamUtilities" */;
+			productName = RecurringDreamUtilities;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 72E0EC8E229B6E66006BD18F /* Project object */;
 }
